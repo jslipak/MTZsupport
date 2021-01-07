@@ -1,0 +1,366 @@
+/* Importaciones  */
+@import "divisores";
+
+/* general  */
+
+* {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/bodyOk.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.italica {
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    width: 80%;
+    height: 130%;
+    margin: auto;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: stretch;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0px;
+    width: 30vw;
+    height: 25vh;
+}
+
+.avatar {
+    margin: 20% auto;
+    display: block;
+    border: solid 2px orange;
+    border-radius: 50%;
+    width: 80%;
+}
+
+/* fin general */
+
+/*  nav  */
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    nav {
+        overflow: hidden;
+        background-color: #333333;
+        li {
+            list-style-type: none;
+            a {
+                display: block;
+                /* border: solid 1px #cccccc ; */
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+                font-weight: bolder;
+                font-size: 1rem;
+                &:hover {
+                    background-color: #111111;
+                }
+            }
+        }
+    }
+}
+
+/* fin de nav  */
+
+/* encabezado  */
+
+.legend {
+    display: flex;
+    border-radius: 10%;
+    width: 40vw;
+    margin: 25px auto;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    .legendLogo {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/* fin encabezado  */
+
+
+/* zonaFlex */
+
+section.zonaFlex {
+    display: flex;
+    background-color: #fff;
+    border-radius: 2%;
+    iframe {
+        width: 50%;
+        width: 600px;
+        margin: 15px;
+        height: 450px;
+        text-align: left;
+    }
+    .resume {
+        display: block;
+        font-size: 1.2rem;
+        width: 50%;
+        margin: 10px;
+        height: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* fin de  zonaFlex*/
+
+/* footer */
+
+footer {
+    display: flex;
+    background-color: #fff;
+    border-radius: 2%;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Stylish', sans-serif;
+    font-size: 1rem;
+    .footerStyle {
+        justify-content: space-between;
+        align-items: row;
+    }
+    .flexColumn>a {
+        text-decoration: none;
+    }
+    .avatarFooter {
+        height: 100%;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+/* fin de footer  */
+
+
+/* pagina about  */
+
+.contenedorGrid {
+    display: grid;
+    background: #A65900;
+    background: -webkit-linear-gradient(top left, #A65900, #11628D);
+    background: -moz-linear-gradient(top left, #A65900, #11628D);
+    background: linear-gradient(to bottom right, #A65900, #11628D);
+    background-attachment: fixed;
+    grid-template-columns: 23vw 32vw 23vw;
+    grid-template-rows: 30vh 40vh 30vh;
+    grid-template-areas: "fotoA textA foto2A""textB fotoB textC""textB fotoB textC";
+    grid-row-gap: 30px;
+    grid-column-gap: 12px;
+    justify-content: center;
+    margin: 40px auto;
+    overflow: hidden;
+    #fotoA {
+        grid-area: fotoA;
+    }
+    #foto2A {
+        grid-area: foto2A;
+    }
+    #fotoB {
+        grid-area: fotoB;
+    }
+    #textA {
+        grid-area: textA;
+        border-radius: 15px;
+        background-color: #fff;
+        display: flex;
+        padding: 15px;
+        flex-direction: row;
+    }
+    .imgFull {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .ulGrid {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        li {
+            display: block;
+            font-size: 2rem;
+            margin: auto;
+        }
+    }
+    #textB {
+        grid-area: textB;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        overflow: hidden;
+    }
+    #textC {
+        grid-area: textC;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        overflow: hidden;
+    }
+}
+
+/* fin pagina about */
+
+
+.formEstilo {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+.jumbotron {
+    background-image: url('../img/feedback.jpg');
+    background-size: cover;
+    margin-top: 10px;
+}
+
+/* Entrega bootstrap con js  */
+
+.carousel {
+    margin: 10%;
+    border-radius: 55px 55px 55px 55px;
+    overflow: hidden;
+}
+
+/*xs  */
+
+@media (max-width: 576px) {
+    .contenedor {
+        margin: 0;
+    }
+    div.legend {
+        margin: auto 5%;
+        width: 90vw;
+    }
+    .avatar {
+        margin: 8% auto;
+    }
+    div.legendText>h2,
+    h3,
+    p {
+        display: none;
+    }
+    h5 {
+        display: inline;
+    }
+    .carousel {
+        margin: 8%;
+        border-radius: 0;
+        width: 88vw;
+    }
+    .flexbox {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tarjetas {
+        width: 95vw;
+        height: 85vh;
+    }
+    .flexbox>a {
+        margin: auto;
+    }
+    .flex {
+        margin: 3%;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex>iframe {
+        display: block;
+        width: 90%;
+    }
+    .flex>p {
+        display: block;
+        width: 90%;
+    }
+    footer.flex.footerStyle {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Small devices xs(landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 992px) {
+    div.legend {
+        margin: auto 5%;
+        width: 90vw;
+    }
+    .avatar {
+        margin: 8% auto;
+    }
+    div.legendText>h2,
+    h3,
+    p {
+        display: none;
+    }
+    h5 {
+        display: inline;
+    }
+    .carousel {
+        margin: 0;
+        border-radius: 0;
+    }
+    .flexbox {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .tarjetas {
+        width: 40vw;
+        height: 80vh;
+    }
+    .flexbox>a {
+        margin: 0;
+    }
+    .flex {
+        margin: 3%;
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex>iframe {
+        display: block;
+        width: 90%;
+    }
+    .flex>p {
+        display: block;
+        width: 90%;
+    }
+    footer.flex.footerStyle {
+        flex-direction: row;
+        align-items: center;
+    }
+}
