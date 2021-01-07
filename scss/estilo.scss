@@ -63,10 +63,10 @@ header {
     position: sticky;
     top: 0px;
     z-index: 99;
-    nav {
+    .navegacion {
         overflow: hidden;
         background-color: #333333;
-        li {
+        navegacion__Linea {
             list-style-type: none;
             a {
                 display: block;
@@ -91,13 +91,13 @@ header {
 
 .legend {
     display: flex;
-    border-radius: 10%;
+    border-radius: 5%;
     width: 40vw;
     margin: 25px auto;
     align-items: center;
     justify-content: space-around;
     background-color: #fff;
-    .legendLogo {
+    .legend__Logo {
         height: 200px;
         width: 200px;
     }
@@ -112,14 +112,14 @@ section.zonaFlex {
     display: flex;
     background-color: #fff;
     border-radius: 2%;
-    iframe {
+    .zonaFlex__iframe {
         width: 50%;
         width: 600px;
         margin: 15px;
         height: 450px;
         text-align: left;
     }
-    .resume {
+    .zona_Flex__resume {
         display: block;
         font-size: 1.2rem;
         width: 50%;
@@ -134,8 +134,9 @@ section.zonaFlex {
 
 /* footer */
 
-footer {
+footer.footer {
     display: flex;
+    justify-content: center;
     background-color: #fff;
     border-radius: 2%;
     padding: 20px;
@@ -147,14 +148,21 @@ footer {
         justify-content: space-between;
         align-items: row;
     }
-    .flexColumn>a {
+    .footer__flexColumn {
         text-decoration: none;
-    }
-    .avatarFooter {
-        height: 100%;
+        align-content: center;
+        width: 25%;
+        height: 30%;
+        a{
+          display: block;
+        };
+    
+    .footer__flexColumn__avatar {
+        height: 50%;
         width: 50%;
         margin: auto;
     }
+  }
 }
 
 /* fin de footer  */

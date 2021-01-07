@@ -146,12 +146,12 @@ header {
   position: sticky;
   top: 0px;
   z-index: 99; }
-  header nav {
+  header .navegacion {
     overflow: hidden;
     background-color: #333333; }
-    header nav li {
+    header .navegacion navegacion__Linea {
       list-style-type: none; }
-      header nav li a {
+      header .navegacion navegacion__Linea a {
         display: block;
         /* border: solid 1px #cccccc ; */
         color: white;
@@ -160,20 +160,20 @@ header {
         text-decoration: none;
         font-weight: bolder;
         font-size: 1rem; }
-        header nav li a:hover {
+        header .navegacion navegacion__Linea a:hover {
           background-color: #111111; }
 
 /* fin de nav  */
 /* encabezado  */
 .legend {
   display: flex;
-  border-radius: 10%;
+  border-radius: 5%;
   width: 40vw;
   margin: 25px auto;
   align-items: center;
   justify-content: space-around;
   background-color: #fff; }
-  .legend .legendLogo {
+  .legend .legend__Logo {
     height: 200px;
     width: 200px; }
 
@@ -183,13 +183,13 @@ section.zonaFlex {
   display: flex;
   background-color: #fff;
   border-radius: 2%; }
-  section.zonaFlex iframe {
+  section.zonaFlex .zonaFlex__iframe {
     width: 50%;
     width: 600px;
     margin: 15px;
     height: 450px;
     text-align: left; }
-  section.zonaFlex .resume {
+  section.zonaFlex .zona_Flex__resume {
     display: block;
     font-size: 1.2rem;
     width: 50%;
@@ -200,8 +200,9 @@ section.zonaFlex {
 
 /* fin de  zonaFlex*/
 /* footer */
-footer {
+footer.footer {
   display: flex;
+  justify-content: center;
   background-color: #fff;
   border-radius: 2%;
   padding: 20px;
@@ -209,15 +210,20 @@ footer {
   text-align: center;
   font-family: 'Stylish', sans-serif;
   font-size: 1rem; }
-  footer .footerStyle {
+  footer.footer .footerStyle {
     justify-content: space-between;
     align-items: row; }
-  footer .flexColumn > a {
-    text-decoration: none; }
-  footer .avatarFooter {
-    height: 100%;
-    width: 50%;
-    margin: auto; }
+  footer.footer .footer__flexColumn {
+    text-decoration: none;
+    align-content: center;
+    width: 25%;
+    height: 30%; }
+    footer.footer .footer__flexColumn a {
+      display: block; }
+    footer.footer .footer__flexColumn .footer__flexColumn__avatar {
+      height: 50%;
+      width: 50%;
+      margin: auto; }
 
 /* fin de footer  */
 /* pagina about  */
