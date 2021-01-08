@@ -1,0 +1,44 @@
+$redes:( twitter:#55acee, facebook:#0676e8, instagram:#e7936d);
+/* footer */
+
+footer {
+    @include flexbox(row);
+    background-color: $bckColor;
+    border-radius: 2%;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Stylish', sans-serif;
+    font-size: 1rem;
+    .footerStyle {
+        justify-content: space-between;
+        align-items: row;
+    }
+    .flexColumn {
+        justify-content: center;
+        p {
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            margin-bottom: 1rem;
+            color: black;
+            text-align: left;
+            @each $red,
+            $color in $redes {
+                .bg-#{$red} {
+                    &:hover {
+                        color: $color;
+                    }
+                }
+            }
+        }
+        .avatarFooter {
+            height: 100%;
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+/* fin de footer  */

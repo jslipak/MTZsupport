@@ -1,0 +1,45 @@
+/* encabezado  */
+
+.legend {
+    @include flexbox(row);
+    border-radius: 10%;
+    width: 40vw;
+    margin: 25px auto;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $bckColor;
+    .legendLogo {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/* fin encabezado  */
+
+/* zonaFlex */
+
+section.zonaFlex {
+    @include flexbox(row);
+    background-color: $bckColor;
+    border-radius: 2%;
+    iframe {
+        width: 50%;
+        width: 600px;
+        margin: 15px;
+        height: 450px;
+        text-align: left;
+    }
+    .resume {
+        display: block;
+        font-size: 1.2rem;
+        width: 50%;
+        margin: 10px;
+        height: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* fin de  zonaFlex*/
+
+
