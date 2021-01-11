@@ -8,14 +8,25 @@
 }
 
 /* Variables*/
+
+/* https://coolors.co/70d6ff-ff70a6-ff9770-ffd670-e9ff70  --> colores en base a esta paleta de coleres --> me parecieron llamativos , no se si es la mejor opcion pero para el proyecto pero puedo ir variando  */
+$babyBlue: #70D6FF;
+$freshPink: #FF70A6;
+$lightSalmon: #FF9770;
+$orangeYellowCrayola: #FFD670;
+$mindaro: #E9FF70;
 $bckColor: #fcfcfc;
-$navBckGround: #333333;
-$navBckHover: #111111;
+$bckColorNav: $mindaro;
+$navBckHover: $freshPink;
+$bckColorFooter: $mindaro;
+$bckGroundContactColor: $orangeYellowCrayola;
+$bckImage:"../img/foto3.jpg";
 /* Importaciones  */
 
 @import "divisores";
 @import "generales";
 @import "navbar";
+/* El footer esta inspirado en esta pagina https://buuuk.com/  */
 @import "footer";
 @import "index";
 @import  "about";

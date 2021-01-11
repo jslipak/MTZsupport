@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('../img/bodyOk.jpg');
+    background-image: url($bckImage);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -36,13 +36,13 @@ img {
 }
 
 .flexColumn {
-    
     @include flexbox(column);
     margin: auto;
     padding: 0px;
     width: 30vw;
     height: 25vh;
 }
+
 
 .avatar {
     margin: 20% auto;

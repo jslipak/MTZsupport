@@ -1,5 +1,6 @@
 /* Mixins  */
 /* Variables*/
+/* https://coolors.co/70d6ff-ff70a6-ff9770-ffd670-e9ff70  --> colores en base a esta paleta de coleres --> me parecieron llamativos , no se si es la mejor opcion pero para el proyecto pero puedo ir variando  */
 /* Importaciones  */
 /* divisores */
 .curved {
@@ -31,7 +32,7 @@
 
 .divider {
   position: relative;
-  margin: 25px;
+  margin: 4px;
   height: 1px;
   z-index: -100; }
 
@@ -97,6 +98,83 @@
   border-radius: 50%;
   box-shadow: inset 0 0 0 2px white; }
 
+.custom-shape-divider-bottom-1610324883 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0; }
+
+.custom-shape-divider-bottom-1610324883 svg {
+  position: relative;
+  display: block;
+  width: calc(138% + 1.3px);
+  height: 35px; }
+
+.custom-shape-divider-bottom-1610324883 .shape-fill {
+  fill: #8A4444; }
+
+.divider {
+  display: flex; }
+  .divider:before, .divider:after {
+    content: "";
+    flex: 1; }
+
+.line {
+  align-items: center;
+  /* margin: 1em -1em; */ }
+  .line:before, .line:after {
+    height: 1px;
+    margin: 0 1em; }
+
+.one-line:before, .one-line:after {
+  background: black; }
+
+.razor:before, .razor:after {
+  box-shadow: 0 0.5px 0 black; }
+
+.double-razor:before, .double-razor:after {
+  height: 3px;
+  box-shadow: 0 -0.5px 0 black, 0 0.5px 0 black;
+  border-width: 0; }
+
+.glow:before, .glow:after {
+  height: 6px;
+  -webkit-filter: blur(5px);
+  border-radius: 5px; }
+
+.glow:before {
+  background: linear-gradient(to right, blue, hotpink); }
+
+.glow:after {
+  background: linear-gradient(to left, blue, hotpink); }
+
+.gradient {
+  align-items: stretch;
+  margin: 1em 0;
+  height: 2em;
+  line-height: 2em;
+  color: white;
+  background: black; }
+  .gradient:before {
+    background: linear-gradient(to right, white, black); }
+  .gradient:after {
+    background: linear-gradient(to left, white, black); }
+
+.donotcross {
+  overflow: hidden;
+  align-items: center;
+  background: #ffd500;
+  color: black;
+  height: 2em;
+  line-height: 2em; }
+  .donotcross:before, .donotcross:after {
+    background: white;
+    padding: 50px 0;
+    height: 0;
+    transform: rotate(45deg); }
+
 /* general  */
 * {
   font-family: 'Barlow', sans-serif;
@@ -104,7 +182,7 @@
   padding: 0; }
 
 body {
-  background-image: url("../img/bodyOk.jpg");
+  background-image: url("../img/foto3.jpg");
   background-size: cover;
   background-attachment: fixed; }
 
@@ -150,26 +228,33 @@ header {
   z-index: 99; }
   header nav {
     overflow: hidden;
-    background-color: #333333; }
+    background-color: #E9FF70; }
+    header nav .logoImgNav {
+      width: 4rem;
+      border: 2px solid #FF9770;
+      border-radius: 15%; }
+    header nav button {
+      color: #FF70A6; }
     header nav li {
       list-style-type: none; }
       header nav li a {
+        color: #FF70A6;
         display: block;
-        color: #fcfcfc;
         text-align: center;
         padding: 16px;
         text-decoration: none;
         font-weight: bolder;
         font-size: 1rem; }
         header nav li a:hover {
-          background-color: #111111; }
+          background-color: #FF9770; }
 
 /* fin de nav  */
+/* El footer esta inspirado en esta pagina https://buuuk.com/  */
 /* footer */
 footer {
   display: flex;
-  background-color: #fcfcfc;
-  border-radius: 2%;
+  background-color: #E9FF70;
+  /* border-radius: 2%; */
   padding: 20px;
   overflow: hidden;
   text-align: center;
@@ -178,60 +263,97 @@ footer {
   footer .footerStyle {
     justify-content: space-between;
     align-items: row; }
-  footer .flexColumn {
-    justify-content: center; }
-    footer .flexColumn p {
-      text-align: right; }
-    footer .flexColumn a {
-      text-decoration: none;
-      margin-bottom: 1rem;
-      color: black;
-      text-align: left; }
-      footer .flexColumn a .bg-twitter:hover {
-        color: #55acee; }
-      footer .flexColumn a .bg-facebook:hover {
-        color: #0676e8; }
-      footer .flexColumn a .bg-instagram:hover {
-        color: #e7936d; }
-    footer .flexColumn .avatarFooter {
-      height: 100%;
+  footer .newsLetter {
+    color: #FF70A6;
+    text-align: left; }
+    footer .newsLetter h2 {
+      font-weight: bold;
+      font-family: 'Anton', sans-serif; }
+    footer .newsLetter .suscribirse {
+      margin-left: 50%;
+      width: 50%; }
+      footer .newsLetter .suscribirse div.suscribirse_icon {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #FF70A6;
+        padding: 10px;
+        color: White;
+        height: 100%; }
+      footer .newsLetter .suscribirse div.suscribirse_text {
+        padding: 10px;
+        background-color: #FF9770;
+        color: white;
+        border: 1px solid #FF70A6;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+  footer .contactFooter .contactData dl {
+    display: flex;
+    flex-wrap: wrap; }
+    footer .contactFooter .contactData dl dt {
+      color: #FF70A6;
       width: 50%;
-      margin: auto; }
+      margin-bottom: 26px;
+      font-size: 1.3em;
+      font-family: 'Anton', sans-serif; }
+    footer .contactFooter .contactData dl dd {
+      width: 50%;
+      font-size: 1.3em; }
 
 /* fin de footer  */
 /* encabezado  */
 .legend {
   display: flex;
-  border-radius: 10%;
-  width: 40vw;
-  margin: 25px auto;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #fcfcfc; }
+  /* border-radius: 10%; */
+  /* width: 40vw; */
+  /* margin: 25px auto; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  background-color: #FFD670;
+  margin: 0; }
   .legend .legendLogo {
     height: 200px;
     width: 200px; }
 
 /* fin encabezado  */
+/* card  */
+section.cardSection {
+  background-image: url("../img/carousel1.jpg");
+  background-size: cover;
+  background-color: white;
+  padding: 3%; }
+  section.cardSection .card {
+    border-radius: 3%;
+    background-color: white;
+    color: #FF70A6;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden; }
+  section.cardSection .btn {
+    background-color: #26c485;
+    color: #FE5F55; }
+
 /* zonaFlex */
 section.zonaFlex {
-  display: flex;
-  background-color: #fcfcfc;
-  border-radius: 2%; }
-  section.zonaFlex iframe {
-    width: 50%;
-    width: 600px;
-    margin: 15px;
-    height: 450px;
-    text-align: left; }
-  section.zonaFlex .resume {
-    display: block;
-    font-size: 1.2rem;
-    width: 50%;
-    margin: 10px;
-    height: 450px;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+  background-color: #FFD670;
+  color: #fcfcfc; }
+  section.zonaFlex span {
+    color: #26C485; }
+  section.zonaFlex .contenedor {
+    display: flex; }
+    section.zonaFlex .contenedor iframe {
+      width: 45%;
+      margin: 15px;
+      height: 450px;
+      text-align: left; }
+    section.zonaFlex .contenedor .resume {
+      display: block;
+      font-size: 1.2rem;
+      width: 45%;
+      margin: 10px;
+      height: 450px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: black; }
 
 /* fin de  zonaFlex*/
 /* pagina about  */
@@ -307,6 +429,12 @@ section.zonaFlex {
   margin: 10%;
   border-radius: 55px 55px 55px 55px;
   overflow: hidden; }
+
+.contactMain {
+  background-color: #FFD670;
+  color: #E9FF70; }
+  .contactMain .formEstilo {
+    margin: 0px; }
 
 /*xs  */
 @media (max-width: 576px) {
