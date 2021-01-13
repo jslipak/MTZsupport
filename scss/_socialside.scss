@@ -1,0 +1,22 @@
+div.socialside {
+  ul {
+    @include flexbox(column);
+    position: fixed;
+    top: 250px;
+    right: 0;
+    z-index: 1;
+    li{
+        display: block;
+        background-color: #333333;
+        color:white;
+        padding: 5px;
+        border-radius: 10%;
+        margin-bottom: 3%;
+      img{
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+  
+}
