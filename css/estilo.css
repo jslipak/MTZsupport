@@ -291,13 +291,13 @@ footer {
     flex-wrap: wrap; }
     footer .contactFooter .contactData dl dt {
       color: #FF70A6;
-      width: 50%;
+      width: 40%;
       margin-bottom: 26px;
       font-size: 1.3em;
       font-family: 'Anton', sans-serif; }
     footer .contactFooter .contactData dl dd {
-      width: 50%;
-      font-size: 1.3em; }
+      width: 60%;
+      font-size: 1em; }
 
 /* fin de footer  */
 /* encabezado  */
@@ -439,15 +439,15 @@ section.zonaFlex {
 /*xs  */
 @media (max-width: 576px) {
   .contenedor {
-    margin: 0; }
+    margin: 2%;
+    width: 100vw; }
   div.legend {
-    margin: auto 5%;
-    width: 90vw; }
+    width: 100vw; }
   .avatar {
     margin: 8% auto; }
-  div.legendText > h2,
-  h3,
-  p {
+  div.legendText h2 {
+    display: none; }
+  div.legendText p {
     display: none; }
   h5 {
     display: inline; }
@@ -458,9 +458,11 @@ section.zonaFlex {
   .flexbox {
     flex-direction: column;
     justify-content: center; }
-  .tarjetas {
-    width: 95vw;
-    height: 85vh; }
+  section.cardSection {
+    padding: 0; }
+  .card {
+    width: 90vw;
+    height: 65vh; }
   .flexbox > a {
     margin: auto; }
   .flex {
@@ -474,21 +476,31 @@ section.zonaFlex {
   .flex > p {
     display: block;
     width: 90%; }
-  footer.flex.footerStyle {
-    flex-direction: row;
-    align-items: center; } }
+  footer.footerStyle {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    margin: 0; }
+    footer.footerStyle .newsLetter {
+      width: 90%; }
+      footer.footerStyle .newsLetter p {
+        display: none; }
+    footer.footerStyle .contactFooter {
+      width: 90%;
+      text-align: left; }
+      footer.footerStyle .contactFooter .contactData dd {
+        width: 70%;
+        font-size: 1rem; }
+      footer.footerStyle .contactFooter .contactData dt {
+        width: 30%; } }
 
 /* Small devices xs(landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 1100px) {
   div.legend {
     margin: auto 5%;
     width: 90vw; }
   .avatar {
     margin: 8% auto; }
-  div.legendText > h2,
-  h3,
-  p {
-    display: none; }
   h5 {
     display: inline; }
   .carousel {
@@ -516,6 +528,16 @@ section.zonaFlex {
   .flex > p {
     display: block;
     width: 90%; }
-  footer.flex.footerStyle {
+  footer.footerStyle {
     flex-direction: row;
-    align-items: center; } }
+    align-items: center; }
+    footer.footerStyle .newsLetter p {
+      display: none; }
+    footer.footerStyle .contactFooter {
+      width: 45%;
+      text-align: left; }
+      footer.footerStyle .contactFooter .contactData dd {
+        width: 65%;
+        font-size: .8rem; }
+      footer.footerStyle .contactFooter .contactData dt {
+        width: 35%; } }

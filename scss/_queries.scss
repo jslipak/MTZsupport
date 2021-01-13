@@ -2,19 +2,22 @@
 
 @media (max-width: 576px) {
     .contenedor {
-        margin: 0;
+        margin: 2%;
+        width: 100vw;
     }
     div.legend {
-        margin: auto 5%;
-        width: 90vw;
+        width: 100vw;
     }
     .avatar {
         margin: 8% auto;
     }
-    div.legendText>h2,
-    h3,
-    p {
-        display: none;
+    div.legendText {
+        h2 {
+            display: none;
+        }
+        p {
+            display: none;
+        }
     }
     h5 {
         display: inline;
@@ -28,9 +31,12 @@
         flex-direction: column;
         justify-content: center;
     }
-    .tarjetas {
-        width: 95vw;
-        height: 85vh;
+    section.cardSection {
+        padding: 0;
+    }
+    .card {
+        width: 90vw;
+        height: 65vh;
     }
     .flexbox>a {
         margin: auto;
@@ -49,26 +55,43 @@
         display: block;
         width: 90%;
     }
-    footer.flex.footerStyle {
-        flex-direction: row;
-        align-items: center;
+    footer.footerStyle {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60vh;
+        margin: 0;
+        .newsLetter {
+            width: 90%;
+            p {
+                display: none;
+            }
+            ;
+        }
+        .contactFooter {
+            width: 90%;
+            text-align: left;
+            .contactData {
+                dd {
+                    width: 70%;
+                    font-size: 1rem;
+                }
+                dt {
+                    width: 30%;
+                }
+            }
+        }
     }
 }
 
 /* Small devices xs(landscape phones, 576px and up) */
 
-@media (min-width: 576px) and (max-width: 992px) {
+@media (min-width: 576px) and (max-width: 1100px) {
     div.legend {
         margin: auto 5%;
         width: 90vw;
     }
     .avatar {
         margin: 8% auto;
-    }
-    div.legendText>h2,
-    h3,
-    p {
-        display: none;
     }
     h5 {
         display: inline;
@@ -105,8 +128,27 @@
         display: block;
         width: 90%;
     }
-    footer.flex.footerStyle {
+    footer.footerStyle {
         flex-direction: row;
         align-items: center;
+
+        .newsLetter {
+            p {
+                display: none;
+            }
+        }
+        .contactFooter {
+            width: 45%;
+            text-align: left;
+            .contactData {
+                dd {
+                    width: 65%;
+                    font-size: .8rem;
+                }
+                dt {
+                    width: 35%;
+                }
+            }
+        }
     }
 }
