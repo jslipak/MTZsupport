@@ -37,7 +37,7 @@
         overflow: hidden;
     }
     .ulGrid {
-        @include flexbox(column)
+        @include flexbox(column);
         width: 50%;
         height: 100%;
         overflow: hidden;
