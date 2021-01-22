@@ -1,7 +1,12 @@
 .contactMain {
   background-color: $bckGroundContactColor;
-  color: $mindaro;
+  color: $freshBlue; 
   .formEstilo {
   margin: 0px;
+  h3 { 
+    color: $raisinBlack;
+    font-weight: bold;
+  }
+
   } 
 }

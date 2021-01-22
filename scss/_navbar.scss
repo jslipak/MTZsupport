@@ -13,12 +13,12 @@ header {
           border-radius: 15%;
         }
         button {
-          color: $freshPink;
+          color: $freshBlue;
         }
         li {
             list-style-type: none;
             a {
-          color: $freshPink;
+          color: $freshBlue;
                 display: block;
                 text-align: center;
                 padding: 16px;
@@ -26,7 +26,7 @@ header {
                 font-weight: bolder;
                 font-size: 1rem;
                 &:hover {
-                    background-color: $lightSalmon;
+                    background-color: $hoverNavList;
                 }
             }
         }

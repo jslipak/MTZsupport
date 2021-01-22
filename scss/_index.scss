@@ -7,7 +7,8 @@
     /* margin: 25px auto; */
     /* align-items: center; */
     /* justify-content: space-around; */
-    background-color: $orangeYellowCrayola;
+    background-color: $indexBckGroundColor;
+    color: $legendColorText;
     margin:0;
     .legendLogo {
         height: 200px;
@@ -24,15 +25,15 @@ section.cardSection {
   padding: 3%;
   .card {
     border-radius: 3%;
-    background-color: white;
-    color: $freshPink;
+    background-color: $cardBackgroundColor;
+    color: $cardColorText;
     font-size: 1rem;
     font-weight: bold;
     overflow: hidden;
   }
   .btn {
-    background-color: #26c485;
-    color: #FE5F55;
+    background-color: $laurenGreen;
+    color: $cardBtnTextColor;
   }
   
 }

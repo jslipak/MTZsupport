@@ -1,6 +1,11 @@
 /* Mixins  */
 /* Variables*/
-/* https://coolors.co/70d6ff-ff70a6-ff9770-ffd670-e9ff70  --> colores en base a esta paleta de coleres --> me parecieron llamativos , no se si es la mejor opcion pero para el proyecto pero puedo ir variando  */
+/* Paletas de colores  */
+/* varibles general  */
+/* variables nav  */
+/* variables footer */
+/* variables Contact */
+/* varibles index */
 /* Importaciones  */
 /* divisores */
 .curved {
@@ -246,17 +251,17 @@ header {
   z-index: 99; }
   header nav {
     overflow: hidden;
-    background-color: #E9FF70; }
+    background-color: #001514; }
     header nav .logoImgNav {
       width: 4rem;
       border: 2px solid #FF9770;
       border-radius: 15%; }
     header nav button {
-      color: #FF70A6; }
+      color: #03efe3; }
     header nav li {
       list-style-type: none; }
       header nav li a {
-        color: #FF70A6;
+        color: #03efe3;
         display: block;
         text-align: center;
         padding: 16px;
@@ -264,16 +269,15 @@ header {
         font-weight: bolder;
         font-size: 1rem; }
         header nav li a:hover {
-          background-color: #FF9770; }
+          background-color: #BDC4A7; }
 
 /* fin de nav  */
-/* El footer esta inspirado en esta pagina https://buuuk.com/  */
 /* footer */
 footer {
   display: flex;
-  background-color: #E9FF70;
+  background-color: #001514;
   /* border-radius: 2%; */
-  padding: 20px;
+  padding: 50px;
   overflow: hidden;
   text-align: center;
   font-family: 'Stylish', sans-serif;
@@ -282,33 +286,37 @@ footer {
     justify-content: space-between;
     align-items: row; }
   footer .newsLetter {
-    color: #FF70A6;
     text-align: left; }
     footer .newsLetter h2 {
+      color: #03efe3;
       font-weight: bold;
       font-family: 'Anton', sans-serif; }
+    footer .newsLetter p, footer .newsLetter a {
+      color: #fefefe; }
+      footer .newsLetter p:hover, footer .newsLetter a:hover {
+        text-decoration: none; }
     footer .newsLetter .suscribirse {
       margin-left: 50%;
       width: 50%; }
       footer .newsLetter .suscribirse div.suscribirse_icon {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        background-color: #FF70A6;
+        background-color: #03efe3;
         padding: 10px;
         color: White;
         height: 100%; }
       footer .newsLetter .suscribirse div.suscribirse_text {
         padding: 10px;
-        background-color: #FF9770;
+        background-color: #2B9EB3;
         color: white;
-        border: 1px solid #FF70A6;
+        border: 1px solid #03efe3;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px; }
   footer .contactFooter .contactData dl {
     display: flex;
     flex-wrap: wrap; }
     footer .contactFooter .contactData dl dt {
-      color: #FF70A6;
+      color: #03efe3;
       width: 40%;
       margin-bottom: 26px;
       font-size: 1.3em;
@@ -316,6 +324,10 @@ footer {
     footer .contactFooter .contactData dl dd {
       width: 60%;
       font-size: 1em; }
+      footer .contactFooter .contactData dl dd a {
+        color: #fefefe; }
+        footer .contactFooter .contactData dl dd a:hover {
+          text-decoration: none; }
 
 /* fin de footer  */
 /* encabezado  */
@@ -326,7 +338,8 @@ footer {
   /* margin: 25px auto; */
   /* align-items: center; */
   /* justify-content: space-around; */
-  background-color: #FFD670;
+  background-color: #3E73BB;
+  color: #FAF4FB;
   margin: 0; }
   .legend .legendLogo {
     height: 200px;
@@ -341,14 +354,14 @@ section.cardSection {
   padding: 3%; }
   section.cardSection .card {
     border-radius: 3%;
-    background-color: white;
-    color: #FF70A6;
+    background-color: #1B1B1E;
+    color: #70D6FF;
     font-size: 1rem;
     font-weight: bold;
     overflow: hidden; }
   section.cardSection .btn {
-    background-color: #26c485;
-    color: #FE5F55; }
+    background-color: #BDC4A7;
+    color: #1e56b2; }
 
 /* zonaFlex */
 section.zonaFlex {
@@ -449,10 +462,13 @@ section.zonaFlex {
   overflow: hidden; }
 
 .contactMain {
-  background-color: #FFD670;
-  color: #E9FF70; }
+  background-color: #BDC4A7;
+  color: #03efe3; }
   .contactMain .formEstilo {
     margin: 0px; }
+    .contactMain .formEstilo h3 {
+      color: #1B1B1E;
+      font-weight: bold; }
 
 /*xs  */
 @media (max-width: 576px) {
@@ -497,6 +513,7 @@ section.zonaFlex {
   footer.footerStyle {
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
     height: 60vh;
     margin: 0; }
     footer.footerStyle .newsLetter {

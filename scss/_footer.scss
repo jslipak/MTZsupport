@@ -4,7 +4,7 @@ footer {
     @include flexbox(row);
     background-color: $bckColorFooter;
     /* border-radius: 2%; */
-    padding: 20px;
+    padding: 50px;
     overflow: hidden;
     text-align: center;
     font-family: 'Stylish', sans-serif;
@@ -14,59 +14,64 @@ footer {
         align-items: row;
     }
     .newsLetter {
-          color: $freshPink;
-          text-align: left;
-      h2 {
-          font-weight: bold;
-          font-family: 'Anton', sans-serif;
-      }
-      .suscribirse {
-        margin-left: 50%;
-        width: 50%;
-        div.suscribirse_icon {
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-        background-color: $freshPink;
-        padding: 10px;
-        color: White;
-        height: 100%;
-        } 
-        div.suscribirse_text {
-
-        padding: 10px;
-        background-color: $lightSalmon;
-        color:white;
-        border:1px solid $freshPink ;
-         border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-  
+        text-align: left;
+        h2 {
+            color: $freshBlue;
+            font-weight: bold;
+            font-family: 'Anton', sans-serif;
         }
-      }
-
+        p, a {
+            color: #fefefe;
+            &:hover  {
+              text-decoration: none;
+            }
+        }
+        .suscribirse {
+            margin-left: 50%;
+            width: 50%;
+            div.suscribirse_icon {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: $freshBlue;
+                padding: 10px;
+                color: White;
+                height: 100%;
+            }
+            div.suscribirse_text {
+                padding: 10px;
+                background-color: #2B9EB3;
+                color: white;
+                border: 1px solid $freshBlue;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
     }
     .contactFooter {
-      .contactData{
-        dl {
-          display: flex;
-          flex-wrap: wrap;
-          dt {
-            color: #FF70A6;
-            width: 40%;
-            margin-bottom: 26px;
-            font-size: 1.3em;
-          font-family: 'Anton', sans-serif;
-          }
-          dd {
-            width: 60%;
-            font-size: 1em;
-          }
-        }  
-      }
-
-      }
-
-
-    
+        .contactData {
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                dt {
+                    color: $freshBlue;
+                    width: 40%;
+                    margin-bottom: 26px;
+                    font-size: 1.3em;
+                    font-family: 'Anton', sans-serif;
+                }
+                dd {
+                    width: 60%;
+                    font-size: 1em;
+                    a {
+                      color: #fefefe;
+                      &:hover {
+                        text-decoration: none;
+                      }
+                    } 
+                }
+            }
+        }
+    }
 }
 
 /* fin de footer  */

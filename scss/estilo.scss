@@ -9,25 +9,45 @@
 
 /* Variables*/
 
-/* https://coolors.co/70d6ff-ff70a6-ff9770-ffd670-e9ff70  --> colores en base a esta paleta de coleres --> me parecieron llamativos , no se si es la mejor opcion pero para el proyecto pero puedo ir variando  */
+/* Paletas de colores  */
 $babyBlue: #70D6FF;
 $freshPink: #FF70A6;
+$freshBlue: #03efe3;
 $lightSalmon: #FF9770;
 $orangeYellowCrayola: #FFD670;
+$blackBabe: #001514;
 $mindaro: #E9FF70;
+$dutchWhite: #DBD5B5;
 $bckColor: #fcfcfc;
-$bckColorNav: $mindaro;
-$navBckHover: $freshPink;
-$bckColorFooter: $mindaro;
-$bckGroundContactColor: $orangeYellowCrayola;
+$laurenGreen: #BDC4A7;
+$raisinBlack: #1B1B1E;
+/* varibles general  */
 $bckImage:"../img/foto3.jpg";
+
+/* variables nav  */
+$bckColorNav: $blackBabe;
+$navBckHover: $freshBlue;
+$hoverNavList: $laurenGreen;
+
+/* variables footer */
+$bckColorFooter: $blackBabe;
+
+/* variables Contact */
+$bckGroundContactColor: $laurenGreen;
+
+/* varibles index */
+$indexBckGroundColor: #3E73BB;
+$legendColorText: #FAF4FB;
+$cardColorText: $babyBlue;
+$cardBackgroundColor: $raisinBlack;
+$cardBtnBackgroundColor: $laurenGreen;
+$cardBtnTextColor: #1e56b2;
 /* Importaciones  */
 
 @import "divisores";
 @import "generales";
 @import "socialside";
 @import "navbar";
-/* El footer esta inspirado en esta pagina https://buuuk.com/  */
 @import "footer";
 @import "index";
 @import  "about";
