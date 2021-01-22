@@ -12,7 +12,6 @@
 /* Paletas de colores  */
 $babyBlue: #70D6FF;
 $freshPink: #FF70A6;
-$freshBlue: #03efe3;
 $lightSalmon: #FF9770;
 $orangeYellowCrayola: #FFD670;
 $blackBabe: #001514;
@@ -25,23 +24,29 @@ $raisinBlack: #1B1B1E;
 $bckImage:"../img/foto3.jpg";
 
 /* variables nav  */
-$bckColorNav: $blackBabe;
-$navBckHover: $freshBlue;
-$hoverNavList: $laurenGreen;
+$navBckColor: $blackBabe;
+$navButtonColor: $babyBlue;
+$navLogoBorder: $lightSalmon;
+$navLinkColor: $babyBlue;
+$navBckHover: $babyBlue;
+$hoverNavList: $bckColor;
 
 /* variables footer */
 $bckColorFooter: $blackBabe;
 
 /* variables Contact */
-$bckGroundContactColor: $laurenGreen;
+$bckGroundContactColor: $babyBlue ;
 
 /* varibles index */
-$indexBckGroundColor: #3E73BB;
-$legendColorText: #FAF4FB;
+$indexBckGroundColor: $babyBlue;
+$legendColorText: $raisinBlack;
 $cardColorText: $babyBlue;
 $cardBackgroundColor: $raisinBlack;
 $cardBtnBackgroundColor: $laurenGreen;
 $cardBtnTextColor: #1e56b2;
+$zonaFlexBckGroundColor: $babyBlue; 
+$zonaFlexBckColor: $raisinBlack;
+$zonaFlexSpanColor: $raisinBlack;
 /* Importaciones  */
 
 @import "divisores";

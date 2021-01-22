@@ -257,11 +257,11 @@ header {
       border: 2px solid #FF9770;
       border-radius: 15%; }
     header nav button {
-      color: #03efe3; }
+      color: #70D6FF; }
     header nav li {
       list-style-type: none; }
       header nav li a {
-        color: #03efe3;
+        color: #70D6FF;
         display: block;
         text-align: center;
         padding: 16px;
@@ -269,7 +269,7 @@ header {
         font-weight: bolder;
         font-size: 1rem; }
         header nav li a:hover {
-          background-color: #BDC4A7; }
+          background-color: #fcfcfc; }
 
 /* fin de nav  */
 /* footer */
@@ -288,7 +288,7 @@ footer {
   footer .newsLetter {
     text-align: left; }
     footer .newsLetter h2 {
-      color: #03efe3;
+      color: #70D6FF;
       font-weight: bold;
       font-family: 'Anton', sans-serif; }
     footer .newsLetter p, footer .newsLetter a {
@@ -301,7 +301,7 @@ footer {
       footer .newsLetter .suscribirse div.suscribirse_icon {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        background-color: #03efe3;
+        background-color: #70D6FF;
         padding: 10px;
         color: White;
         height: 100%; }
@@ -309,14 +309,14 @@ footer {
         padding: 10px;
         background-color: #2B9EB3;
         color: white;
-        border: 1px solid #03efe3;
+        border: 1px solid #70D6FF;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px; }
   footer .contactFooter .contactData dl {
     display: flex;
     flex-wrap: wrap; }
     footer .contactFooter .contactData dl dt {
-      color: #03efe3;
+      color: #70D6FF;
       width: 40%;
       margin-bottom: 26px;
       font-size: 1.3em;
@@ -338,8 +338,8 @@ footer {
   /* margin: 25px auto; */
   /* align-items: center; */
   /* justify-content: space-around; */
-  background-color: #3E73BB;
-  color: #FAF4FB;
+  background-color: #70D6FF;
+  color: #1B1B1E;
   margin: 0; }
   .legend .legendLogo {
     height: 200px;
@@ -365,10 +365,11 @@ section.cardSection {
 
 /* zonaFlex */
 section.zonaFlex {
-  background-color: #FFD670;
-  color: #fcfcfc; }
+  background-color: #70D6FF;
+  color: #1B1B1E; }
   section.zonaFlex span {
-    color: #26C485; }
+    color: #1B1B1E;
+    border-style: 1px solid white; }
   section.zonaFlex .contenedor {
     display: flex; }
     section.zonaFlex .contenedor iframe {
@@ -378,13 +379,13 @@ section.zonaFlex {
       text-align: left; }
     section.zonaFlex .contenedor .resume {
       display: block;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-weight: 900;
       width: 45%;
       margin: 10px;
       height: 450px;
       overflow: hidden;
-      text-overflow: ellipsis;
-      color: black; }
+      text-overflow: ellipsis; }
 
 /* fin de  zonaFlex*/
 /* pagina about  */
@@ -462,8 +463,8 @@ section.zonaFlex {
   overflow: hidden; }
 
 .contactMain {
-  background-color: #BDC4A7;
-  color: #03efe3; }
+  background-color: #70D6FF;
+  color: #70D6FF; }
   .contactMain .formEstilo {
     margin: 0px; }
     .contactMain .formEstilo h3 {

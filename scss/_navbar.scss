@@ -6,19 +6,19 @@ header {
     z-index: 99;
     nav {
         overflow: hidden;
-        background-color: $bckColorNav;
+        background-color: $navBckColor;
         .logoImgNav{
           width: 4rem;
-          border: 2px solid $lightSalmon;
+          border: 2px solid $navLogoBorder;
           border-radius: 15%;
         }
         button {
-          color: $freshBlue;
+          color: $navButtonColor;
         }
         li {
             list-style-type: none;
             a {
-          color: $freshBlue;
+          color: $navLinkColor;
                 display: block;
                 text-align: center;
                 padding: 16px;

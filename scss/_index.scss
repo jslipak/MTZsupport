@@ -40,10 +40,11 @@ section.cardSection {
 /* zonaFlex */
 
 section.zonaFlex {
-    background-color: $orangeYellowCrayola;
-    color: $bckColor;
+    background-color: $zonaFlexBckGroundColor;
+    color: $zonaFlexBckColor;
     span {
-      color: #26C485;
+      color: $zonaFlexSpanColor;
+      border-style: 1px solid white;
     }
     .contenedor {
     @include flexbox(row);
@@ -57,13 +58,13 @@ section.zonaFlex {
     }
     .resume {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 900;
         width: 45%;
         margin: 10px;
         height: 450px;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: black;
     }
   }
 }
