@@ -29,7 +29,8 @@ $navButtonColor: $babyBlue;
 $navLogoBorder: $lightSalmon;
 $navLinkColor: $babyBlue;
 $navBckHover: $babyBlue;
-$hoverNavList: $bckColor;
+$hoverNavListBckColor: $babyBlue;
+$hoverNavListColor: $bckColor;
 
 /* variables footer */
 $bckColorFooter: $blackBabe;
@@ -42,11 +43,12 @@ $indexBckGroundColor: $babyBlue;
 $legendColorText: $raisinBlack;
 $cardColorText: $babyBlue;
 $cardBackgroundColor: $raisinBlack;
-$cardBtnBackgroundColor: $laurenGreen;
-$cardBtnTextColor: #1e56b2;
+$cardBtnBackgroundColor: $bckColor;
+$cardBtnTextColor: $raisinBlack;
 $zonaFlexBckGroundColor: $babyBlue; 
 $zonaFlexBckColor: $raisinBlack;
 $zonaFlexSpanColor: $raisinBlack;
+$cardHeader: $babyBlue;
 /* Importaciones  */
 
 @import "divisores";

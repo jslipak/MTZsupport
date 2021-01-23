@@ -18,7 +18,7 @@ header {
         li {
             list-style-type: none;
             a {
-          color: $navLinkColor;
+                color: $navLinkColor;
                 display: block;
                 text-align: center;
                 padding: 16px;
@@ -26,7 +26,8 @@ header {
                 font-weight: bolder;
                 font-size: 1rem;
                 &:hover {
-                    background-color: $hoverNavList;
+                    background-color: $hoverNavListBckColor;
+                    color: $hoverNavListColor;
                 }
             }
         }

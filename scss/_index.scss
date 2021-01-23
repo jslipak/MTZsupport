@@ -23,6 +23,15 @@ section.cardSection {
   background-size: cover;
   background-color: white;
   padding: 3%;
+  h1.cardHeader {
+    color: $cardHeader;
+    font-weight: bold;
+    font-size: 4rem;
+    -webkit-text-stroke: 2px  $raisinBlack;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
   .card {
     border-radius: 3%;
     background-color: $cardBackgroundColor;
@@ -32,7 +41,7 @@ section.cardSection {
     overflow: hidden;
   }
   .btn {
-    background-color: $laurenGreen;
+    background-color: $cardBtnBackgroundColor;
     color: $cardBtnTextColor;
   }
   
@@ -44,7 +53,6 @@ section.zonaFlex {
     color: $zonaFlexBckColor;
     span {
       color: $zonaFlexSpanColor;
-      border-style: 1px solid white;
     }
     .contenedor {
     @include flexbox(row);
