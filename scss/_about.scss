@@ -1,66 +1,29 @@
 /* pagina about  */
 
-.contenedorGrid {
-    display: grid;
-    background: #A65900;
-    background: -webkit-linear-gradient(top left, #A65900, #11628D);
-    background: -moz-linear-gradient(top left, #A65900, #11628D);
-    background: linear-gradient(to bottom right, #A65900, #11628D);
-    background-attachment: fixed;
-    grid-template-columns: 23vw 32vw 23vw;
-    grid-template-rows: 30vh 40vh 30vh;
-    grid-template-areas: "fotoA textA foto2A""textB fotoB textC""textB fotoB textC";
-    grid-row-gap: 30px;
-    grid-column-gap: 12px;
-    justify-content: center;
-    margin: 40px auto;
-    overflow: hidden;
-    #fotoA {
-        grid-area: fotoA;
-    }
-    #foto2A {
-        grid-area: foto2A;
-    }
-    #fotoB {
-        grid-area: fotoB;
-    }
-    #textA {
-        grid-area: textA;
-        border-radius: 15px;
-        background-color: $bckColor;
-        padding: 15px;
-        @include flexbox(row);
-    }
-    .imgFull {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
-    .ulGrid {
-        @include flexbox(column);
-        width: 50%;
-        height: 100%;
-        overflow: hidden;
-        li {
-            display: block;
-            font-size: 2rem;
-            margin: auto;
-        }
-    }
-    #textB {
-        grid-area: textB;
-        background-color: $bckColor;
-        border-radius: 15px;
-        padding: 15px;
-        overflow: hidden;
-    }
-    #textC {
-        grid-area: textC;
-        background-color: $bckColor;
-        border-radius: 15px;
-        padding: 15px;
-        overflow: hidden;
-    }
+
+.how-section1{
+    margin-top:-15%;
+    padding: 10%;
+}
+.how-section1 h4{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
+.how-section1 .subheading{
+    color: #3931af;
+    font-size: 20px;
+}
+.how-section1 .row
+{
+    margin-top: 10%;
+}
+.how-img 
+{
+    text-align: center;
+}
+.how-img img{
+    width: 40%;
 }
 
 /* fin pagina about */

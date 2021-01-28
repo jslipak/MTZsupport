@@ -21,7 +21,7 @@ $bckColor: #fcfcfc;
 $laurenGreen: #BDC4A7;
 $raisinBlack: #1B1B1E;
 /* varibles general  */
-$bckImage:"../img/foto3.jpg";
+$generalBckColor: $babyBlue;
 
 /* variables nav  */
 $navBckColor: $blackBabe;
@@ -46,9 +46,13 @@ $cardBackgroundColor: $raisinBlack;
 $cardBtnBackgroundColor: $bckColor;
 $cardBtnTextColor: $raisinBlack;
 $zonaFlexBckGroundColor: $babyBlue; 
-$zonaFlexBckColor: $raisinBlack;
+$zonaFlexBckColor: $bckColor;
 $zonaFlexSpanColor: $raisinBlack;
-$cardHeader: $babyBlue;
+$cardHeaderColor: $babyBlue;
+$zonaFlexColorText: $bckColor;
+
+/* variables About */
+$AboutMainBckColor: $babyBlue;
 /* Importaciones  */
 
 @import "divisores";

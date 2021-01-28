@@ -9,7 +9,7 @@
     /* justify-content: space-around; */
     background-color: $indexBckGroundColor;
     color: $legendColorText;
-    margin:0;
+    margin: 0;
     .legendLogo {
         height: 200px;
         width: 200px;
@@ -17,66 +17,76 @@
 }
 
 /* fin encabezado  */
+
 /* card  */
+
 section.cardSection {
-  background-image: url('../img/carousel1.jpg');
-  background-size: cover;
-  background-color: white;
-  padding: 3%;
-  h1.cardHeader {
-    color: $cardHeader;
-    font-weight: bold;
-    font-size: 4rem;
-    -webkit-text-stroke: 2px  $raisinBlack;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-  .card {
-    border-radius: 3%;
-    background-color: $cardBackgroundColor;
-    color: $cardColorText;
-    font-size: 1rem;
-    font-weight: bold;
-    overflow: hidden;
-  }
-  .btn {
-    background-color: $cardBtnBackgroundColor;
-    color: $cardBtnTextColor;
-  }
-  
+    background-image: url('../img/carousel1.jpg');
+    background-size: cover;
+    background-color: white;
+    padding: 3%;
+    h1.cardHeader {
+        color: $cardHeaderColor;
+        font-weight: bold;
+        font-size: 4rem;
+        -webkit-text-stroke: .2px $raisinBlack;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-family: 'Anton', sans-serif;
+    }
+    .card {
+        border-radius: 3%;
+        background-color: $cardBackgroundColor;
+        color: $cardColorText;
+        font-size: 1rem;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    .btn {
+        background-color: $cardBtnBackgroundColor;
+        color: $cardBtnTextColor;
+    }
 }
+
 /* zonaFlex */
 
 section.zonaFlex {
     background-color: $zonaFlexBckGroundColor;
     color: $zonaFlexBckColor;
+    h1.zonaFlexHeader {
+        color:$zonaFlexColorText ;
+        font-weight: bold;
+        font-size: 4rem;
+        -webkit-text-stroke: .2px $raisinBlack;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-family: 'Anton', sans-serif;
+    }
     span {
-      color: $zonaFlexSpanColor;
+        color: $zonaFlexSpanColor;
     }
     .contenedor {
-    @include flexbox(row);
-
-    
-    iframe {
-        width: 45%;
-        margin: 15px;
-        height: 450px;
-        text-align: left;
+        @include flexbox(row);
+        iframe {
+            width: 45%;
+            margin: 15px;
+            height: 450px;
+            text-align: left;
+        }
+        .resume {
+            display: block;
+            color: $zonaFlexColorText;
+            font-size: 1rem;
+            font-weight: 900;
+            width: 45%;
+            margin: 10px;
+            height: 450px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
-    .resume {
-        display: block;
-        font-size: 1rem;
-        font-weight: 900;
-        width: 45%;
-        margin: 10px;
-        height: 450px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-  }
 }
 
 /* fin de  zonaFlex*/
-
-
