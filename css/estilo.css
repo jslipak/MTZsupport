@@ -7,6 +7,8 @@
 /* variables Contact */
 /* varibles index */
 /* variables About */
+/* Variables servicios  */
+/* Variables Productoos  */
 /* Importaciones  */
 /* divisores */
 .curved {
@@ -338,9 +340,14 @@ footer {
   background-color: #70D6FF;
   color: #1B1B1E;
   margin: 0; }
+  .legend .legendFlex {
+    display: flex;
+    margin: auto; }
   .legend .legendLogo {
     height: 200px;
     width: 200px; }
+    .legend .legendLogo img {
+      margin: auto; }
 
 /* fin encabezado  */
 /* card  */
@@ -365,6 +372,8 @@ section.cardSection {
     font-size: 1rem;
     font-weight: bold;
     overflow: hidden; }
+    section.cardSection .card img {
+      height: 200px; }
   section.cardSection .btn {
     background-color: #fcfcfc;
     color: #1B1B1E; }
@@ -436,47 +445,24 @@ div.hideLess800.col-md-6.how-img {
     width: 300px; }
 
 /* fin pagina about */
-.social-card-header {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 96px; }
+.container .productosContainerH3 {
+  margin: auto;
+  font-weight: bold;
+  font-size: 4rem;
+  -webkit-text-stroke: 0.2px #1B1B1E;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: 'Anton', sans-serif;
+  color: white; }
 
-.social-card-header i {
-  font-size: 32px;
-  color: #FFF; }
-
-.bg-facebook {
-  background-color: #3b5998; }
-
-.text-facebook {
-  color: #3b5998; }
-
-.bg-google-plus {
-  background-color: #dd4b39; }
-
-.text-google-plus {
-  color: #dd4b39; }
-
-.bg-twitter {
-  background-color: #1da1f2; }
-
-.text-twitter {
-  color: #1da1f2; }
-
-.bg-pinterest {
-  background-color: #bd081c; }
-
-.text-pinterest {
-  color: #bd081c; }
-
-.share:hover {
-  text-decoration: none;
-  opacity: 0.8; }
+.container .cardColorBG {
+  background-color: #001514;
+  color: white; }
+  .container .cardColorBG img {
+    height: 202px;
+    width: 100%;
+    margin: auto; }
 
 .pt-100 {
   padding-top: 100px; }
@@ -504,14 +490,14 @@ div.hideLess800.col-md-6.how-img {
   content: "";
   width: 60px;
   height: 2px;
-  background-color: #ff3636;
+  background-color: #001514;
   bottom: 0;
   left: 50%;
   margin-left: -30px; }
 
 .section-title h4:after {
   position: absolute;
-  background-color: #ff3636;
+  background-color: #001514;
   content: "";
   width: 10px;
   height: 10px;
@@ -530,7 +516,7 @@ div.hideLess800.col-md-6.how-img {
 .single-service i.fa {
   width: 60px;
   height: 60px;
-  background-color: #ff3636;
+  background-color: #001514;
   font-size: 25px;
   color: #fff;
   line-height: 60px;
@@ -558,6 +544,11 @@ div.hideLess800.col-md-6.how-img {
     .contactMain .formEstilo h3 {
       color: #1B1B1E;
       font-weight: bold; }
+    .contactMain .formEstilo .jumbotron {
+      background-image: url("../img/feedback.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
 
 /*xs  */
 @media (max-width: 576px) {
@@ -568,10 +559,12 @@ div.hideLess800.col-md-6.how-img {
     width: 100vw; }
   .avatar {
     margin: 8% auto; }
-  div.legendText h2 {
+  div.legendText h1, div.legendText h2, div.legendText h3 {
     display: none; }
   div.legendText p {
     display: none; }
+  div.zonaFlex {
+    flex-direction: column; }
   h5 {
     display: inline; }
   .carousel {

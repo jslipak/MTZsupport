@@ -1,12 +1,17 @@
 .contactMain {
-  background-color: $bckGroundContactColor;
-  color: $babyBlue; 
-  .formEstilo {
-  margin: 0px;
-  h3 { 
-    color: $raisinBlack;
-    font-weight: bold;
-  }
-
-  } 
+    background-color: $bckGroundContactColor;
+    color: $babyBlue;
+    .formEstilo {
+        margin: 0px;
+        h3 {
+            color: $raisinBlack;
+            font-weight: bold;
+        }
+        .jumbotron {
+            background-image: url('../img/feedback.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
 }

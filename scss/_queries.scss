@@ -12,12 +12,15 @@
         margin: 8% auto;
     }
     div.legendText {
-        h2 {
+        h1,h2,h3 {
             display: none;
         }
         p {
             display: none;
         }
+    }
+    div.zonaFlex  {
+      flex-direction: column;
     }
     h5 {
         display: inline;

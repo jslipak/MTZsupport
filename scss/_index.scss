@@ -10,9 +10,16 @@
     background-color: $indexBckGroundColor;
     color: $legendColorText;
     margin: 0;
+    .legendFlex  {
+      display: flex;
+      margin: auto;
+    }
     .legendLogo {
         height: 200px;
         width: 200px;
+        img  {
+          margin: auto;
+        }
     }
 }
 
@@ -42,6 +49,9 @@ section.cardSection {
         font-size: 1rem;
         font-weight: bold;
         overflow: hidden;
+        img  {
+          height: 200px;
+        }
     }
     .btn {
         background-color: $cardBtnBackgroundColor;

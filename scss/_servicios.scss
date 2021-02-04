@@ -25,14 +25,14 @@
 	content: "";
 	width: 60px;
 	height: 2px;
-	background-color: #ff3636;
+	background-color: $cardIconosBckColor ;
 	bottom: 0;
 	left: 50%;
 	margin-left: -30px;
 }
 .section-title h4:after {
 	position: absolute;
-	background-color: #ff3636;
+	background-color: $cardIconosBckColor; 
 	content: "";
 	width: 10px;
 	height: 10px;
@@ -51,7 +51,7 @@
 .single-service i.fa {
   width: 60px;
   height: 60px;
-  background-color: #ff3636;
+  background-color: $cardIconosBckColor;
   font-size: 25px;
   color: #fff;
   line-height: 60px;
