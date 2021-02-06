@@ -4,6 +4,14 @@
     .contenedor {
         width: 100vw;
     }
+    .navbar-brand  {
+      position: fixed;
+      top: 2%;
+      left: 4%;
+      z-index: 1;
+      background-color: $blackBabe;
+    }
+    
     div.legend {
         width: 100vw;
     }

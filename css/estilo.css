@@ -202,7 +202,7 @@ body {
   width: 80%;
   height: 130%;
   margin: auto;
-  padding: 40px; }
+  padding: 40px 0px; }
 
 .flexbox {
   display: flex;
@@ -586,6 +586,12 @@ div.hideLess800.col-md-6.how-img {
 @media (max-width: 576px) {
   .contenedor {
     width: 100vw; }
+  .navbar-brand {
+    position: fixed;
+    top: 2%;
+    left: 4%;
+    z-index: 1;
+    background-color: #001514; }
   div.legend {
     width: 100vw; }
   .avatar {
