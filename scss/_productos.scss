@@ -13,14 +13,26 @@
     .cardColorBG {
         background-color: $productosCardBG;
         color: white;
-        img  {
-          height: 202px;
-          width: 100%;
-          margin: auto;
+        -webkit-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        transition: transform .5s;
+        img {
+            height: 202px;
+            width: 100%;
+            margin: auto;
         }
-        a.btn  {
-          display: block;
-          margin-top: auto;
+        .btn {
+            display: block;
+            background-color: $cardBtnBackgroundColor;
+            color: $cardBtnTextColor;
+            &:hover {
+                background-color: $cardBtnHoverBck;
+                color: $cardBtnHoverText;
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
         }
     }
 }

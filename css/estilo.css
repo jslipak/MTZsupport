@@ -4,11 +4,12 @@
 /* varibles general  */
 /* variables nav  */
 /* variables footer */
-/* variables Contact */
+/* varibless card  */
 /* varibles index */
 /* variables About */
 /* Variables servicios  */
 /* Variables Productoos  */
+/* variables Contact */
 /* Importaciones  */
 /* divisores */
 .curved {
@@ -200,7 +201,8 @@ body {
 .contenedor {
   width: 80%;
   height: 130%;
-  margin: auto; }
+  margin: auto;
+  padding: 40px; }
 
 .flexbox {
   display: flex;
@@ -307,10 +309,11 @@ footer {
       footer .newsLetter .suscribirse div.suscribirse_text {
         padding: 10px;
         background-color: #2B9EB3;
-        color: white;
         border: 1px solid #70D6FF;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px; }
+      footer .newsLetter .suscribirse .linkMailchimp {
+        color: #001514; }
   footer .contactFooter .contactData dl {
     display: flex;
     flex-wrap: wrap; }
@@ -388,7 +391,7 @@ section.cardSection {
       background-color: #fcfcfc;
       color: #1B1B1E; }
       section.cardSection .card .btn:hover {
-        background-color: #70D6FF;
+        background-color: #1B1B1E;
         color: #fcfcfc; }
     section.cardSection .card:hover {
       transform: scale(1.1); }
@@ -398,7 +401,7 @@ section.zonaFlex {
   background-color: #70D6FF;
   color: #fcfcfc; }
   section.zonaFlex h1.zonaFlexHeader {
-    color: #fcfcfc;
+    color: #1B1B1E;
     font-weight: bold;
     font-size: 4rem;
     -webkit-text-stroke: 0.2px #1B1B1E;
@@ -417,7 +420,7 @@ section.zonaFlex {
       text-align: left; }
     section.zonaFlex .contenedor .resume {
       display: block;
-      color: #fcfcfc;
+      color: #1B1B1E;
       font-size: 1rem;
       font-weight: 900;
       width: 45%;
@@ -433,7 +436,7 @@ section.zonaFlex {
   padding: 10%; }
 
 .how-section1 h4 {
-  color: #ffa500;
+  color: #1B1B1E;
   font-weight: bold;
   font-size: 30px; }
 
@@ -473,14 +476,24 @@ div.hideLess800.col-md-6.how-img {
 
 .container .cardColorBG {
   background-color: #001514;
-  color: white; }
+  color: white;
+  -webkit-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+  transition: transform .5s; }
   .container .cardColorBG img {
     height: 202px;
     width: 100%;
     margin: auto; }
-  .container .cardColorBG a.btn {
+  .container .cardColorBG .btn {
     display: block;
-    margin-top: auto; }
+    background-color: #fcfcfc;
+    color: #1B1B1E; }
+    .container .cardColorBG .btn:hover {
+      background-color: #1B1B1E;
+      color: #fcfcfc; }
+  .container .cardColorBG:hover {
+    transform: scale(1.1); }
 
 .pt-100 {
   padding-top: 100px; }
@@ -558,8 +571,9 @@ div.hideLess800.col-md-6.how-img {
   background-color: #70D6FF;
   color: #70D6FF; }
   .contactMain .formEstilo {
-    margin: 0px; }
-    .contactMain .formEstilo h3 {
+    margin: 0px;
+    padding: 20px; }
+    .contactMain .formEstilo h2 {
       color: #1B1B1E;
       font-weight: bold; }
     .contactMain .formEstilo .jumbotron {

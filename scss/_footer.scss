@@ -40,10 +40,13 @@ footer {
             div.suscribirse_text {
                 padding: 10px;
                 background-color: #2B9EB3;
-                color: white;
                 border: 1px solid $babyBlue;
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
+            }
+            .linkMailchimp  {
+                color: $footerSuscribeTest;
+              
             }
         }
     }
