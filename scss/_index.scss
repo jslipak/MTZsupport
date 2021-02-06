@@ -5,16 +5,18 @@
     background-color: $indexBckGroundColor;
     color: $legendColorText;
     margin: 0;
+    padding: 10px;
     .legendFlex {
         display: flex;
         margin: auto;
     }
+    .legendText {
+        padding: 20px;
+    }
     .legendLogo {
-        height: 200px;
+        @include flexbox(column) height: 200px;
         width: 200px;
-        img {
-            margin: auto;
-        }
+        justify-content: center;
     }
     h1 {
         span {
@@ -50,13 +52,32 @@ section.cardSection {
         font-size: 1rem;
         font-weight: bold;
         overflow: hidden;
+        -webkit-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+        transition: transform .5s;
+        .card-body {
+            h5 {
+                height: 30px;
+            }
+            p {
+                height: 125px;
+            }
+        }
         img {
             height: 200px;
         }
-    }
-    .btn {
-        background-color: $cardBtnBackgroundColor;
-        color: $cardBtnTextColor;
+        .btn {
+            background-color: $cardBtnBackgroundColor;
+            color: $cardBtnTextColor;
+            &:hover {
+                background-color: $cardBtnHoverBck;
+                color: $cardBtnHoverText;
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 

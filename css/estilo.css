@@ -334,15 +334,19 @@ footer {
   display: flex;
   background-color: #70D6FF;
   color: #1B1B1E;
-  margin: 0; }
+  margin: 0;
+  padding: 10px; }
   .legend .legendFlex {
     display: flex;
     margin: auto; }
+  .legend .legendText {
+    padding: 20px; }
   .legend .legendLogo {
+    display: flex;
+    flex-direction: column;
     height: 200px;
-    width: 200px; }
-    .legend .legendLogo img {
-      margin: auto; }
+    width: 200px;
+    justify-content: center; }
   .legend h1 span {
     font-family: 'Anton', sans-serif;
     color: #001514; }
@@ -369,12 +373,25 @@ section.cardSection {
     color: #70D6FF;
     font-size: 1rem;
     font-weight: bold;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px -2px 32px -2px rgba(0, 0, 0, 0.75);
+    transition: transform .5s; }
+    section.cardSection .card .card-body h5 {
+      height: 30px; }
+    section.cardSection .card .card-body p {
+      height: 125px; }
     section.cardSection .card img {
       height: 200px; }
-  section.cardSection .btn {
-    background-color: #fcfcfc;
-    color: #1B1B1E; }
+    section.cardSection .card .btn {
+      background-color: #fcfcfc;
+      color: #1B1B1E; }
+      section.cardSection .card .btn:hover {
+        background-color: #70D6FF;
+        color: #fcfcfc; }
+    section.cardSection .card:hover {
+      transform: scale(1.1); }
 
 /* zonaFlex */
 section.zonaFlex {
@@ -461,6 +478,9 @@ div.hideLess800.col-md-6.how-img {
     height: 202px;
     width: 100%;
     margin: auto; }
+  .container .cardColorBG a.btn {
+    display: block;
+    margin-top: auto; }
 
 .pt-100 {
   padding-top: 100px; }
