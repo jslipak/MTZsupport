@@ -572,7 +572,11 @@ div.hideLess800.col-md-6.how-img {
   color: #70D6FF; }
   .contactMain .formEstilo {
     margin: 0px;
-    padding: 20px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: 70vh; }
     .contactMain .formEstilo h2 {
       color: #1B1B1E;
       font-weight: bold; }
