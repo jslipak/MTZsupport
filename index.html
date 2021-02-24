@@ -23,6 +23,7 @@
         crossorigin="anonymous" />
 
     <link rel="stylesheet" href="./css/estilo.css">
+    <script defer src="./javascripts/main.js" ></script>
 
 </head>
 <!-- fin head -->
@@ -75,7 +76,8 @@
                 </div>
                 <div class="legendText">
                     <h1><span>MTZ Support</span></h1>
-                    <h2>Brindamos soporte en infraestructura y en conectividad para su hogar o empresa.
+                    <h2>Brindamos soporte en infraestructura y en conectividad para
+                        su hogar o empresa.
                     </h2>
                     <h3>con 20 años de experiencia en Zona Norte!</h3>
                 </div>
@@ -90,8 +92,10 @@
                         <img src="./img/teletrabajo.jpg" class="card-img-top" alt="300x150">
                         <div class="card-body">
                             <h5 class="card-title">Tele-trabajo</h5>
-                            <p class="card-text text-left">con tecnologías como vpn , file-server y maquinas virtuales podemos lograr que el trabajo de su personal sea el adecuado.</p>
-                            <a href="mailto:seriedigital@gmail.com" class="btn btn-outline-light">Mas información</a>
+                            <p class="card-text text-left">con tecnologías como vpn , file-server y maquinas virtuales
+                                podemos lograr que el trabajo de su personal sea
+                                el adecuado.</p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -100,8 +104,10 @@
                         <img src="./img/repair.jpg" class="card-img-top" alt="repair">
                         <div class="card-body">
                             <h5 class="card-title">Servicio Técnico a Domicilio</h5>
-                            <p class="card-text text-left">Brindamos soporte a domicilio en la zona norte , contamos con mas de 20 años de experiencia. Tanto Mac como PC </p>
-                            <a href="mailto:seriedigital@gmail.com" class="btn btn-outline-light">Mas información</a>
+                            <p class="card-text text-left">Brindamos soporte a domicilio en la zona norte , contamos
+                                con mas de 20 años de experiencia. Tanto Mac como
+                                PC </p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -110,8 +116,9 @@
                         <img src="./img/rails.jpg" class="card-img-top" alt="Rails">
                         <div class="card-body">
                             <h5 class="card-title">Desarrollos APP & WEB</h5>
-                            <p class="card-text text-left">Desarrollamos aplicaciones en  Ruby on Rails con metodología TDD y base de datos PostgreSQL.  </p>
-                            <a href="mailto:seriedigital@gmail.com" class="btn btn-outline-light">Mas información</a>
+                            <p class="card-text text-left">Desarrollamos aplicaciones en Ruby on Rails con metodología
+                                TDD y base de datos PostgreSQL. </p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
                         </div>
                     </div>
                 </div>
@@ -119,7 +126,7 @@
         </section>
         <div class="divider line glow" contenteditable></div>
         <section class="zonaFlex">
-          <h1 class="zonaFlexHeader">Zona y horarios</h1>
+            <h1 class="zonaFlexHeader">Zona y horarios</h1>
             <div class="contenedor">
                 <iframe title="My address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7205444341816!2d-58.4321324!3d-34.585937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc945173b3dd7%3A0xe8a347bb55df550c!2sCoderhouse!5e0!3m2!1sen!2sar!4v1606928107024!5m2!1sen!2sar"
                     allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -157,7 +164,7 @@
                     <span class="far fa-bell"></span>
                 </div>
                 <div class="suscribirse_text">
-                    <a class="linkMailchimp"href="https://mailchimp.com/">Suscribirse</a>
+                    <a class="linkMailchimp" href="https://mailchimp.com/">Suscribirse</a>
                 </div>
             </div>
         </div>
@@ -189,6 +196,86 @@
 
         </div>
     </footer>
+    <div id="ModalForm" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Login</h1>
+                </div>
+                <div class="modal-body">
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">E-Mail Address</label>
+                            <div>
+                                <input type="email" class="form-control input-lg" name="email" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <div class="checkbox">
+                                    <label>
+                                    <input type="checkbox" name="remember"> Remember Me
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button type="submit" class="btn btn-success">Login</button>
+
+                                <a class="btn btn-link" href="">Forgot Your Password?</a>
+                            </div>
+                        </div>
+                    </form>
+                    <h1>Or Signup!</h1>
+                    <form role="form" method="POST" action="">
+                        <input type="hidden" name="_token" value="">
+                        <div class="form-group">
+                            <label class="control-label">Username</label>
+                            <div>
+                                <input type="text" class="form-control input-lg" name="name" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">E-Mail Address</label>
+                            <div>
+                                <input type="email" class="form-control input-lg" name="email" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Password</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Confirm Password</label>
+                            <div>
+                                <input type="password" class="form-control input-lg" name="password_confirmation">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button type="submit" class="btn btn-success">
+                                Register
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <!-- fin footer -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj
