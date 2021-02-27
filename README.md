@@ -1,5 +1,7 @@
 # MTZsupport
- 
+
+### Nota Natalia Giselle por favor decime si te llamo por Natalia o Giselle  como te resulte comodo. (a mi Jona) , ya te agregue una clase con una creación de un objeto y luego que lo crea ejecuta un metodo que lista todos los valores de los input. El metodo lo probe en varios navegadores y en casi todos anda --> no me tomo el trabajo de buscar como corrogirlo(para que ande en algun navegador viejo) porque la idea es que los tomo del DOM cuando haga el submit  || Tambien podria ser de los params pero para eso necesitaria un Back-end --> Saludos y buen fin de semana 
+
 - la dirección de hosting es [MTZSupport](https://mtzsupport.000webhostapp.com)
 - El repositorio de github es [MTZSuppot](https://github.com/jslipak/jslipak.github.io)
 - la pagina web de github es [MTZsupport](https://jslipak.github.io/)
