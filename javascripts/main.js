@@ -17,7 +17,5 @@ function inputString(str) {
     return prompt("Ingrese su " + str +": ");
 }
 
-msg = new FormMsg(inputString("Nombre Completo"), inputString("email"), inputString("teléfono"), inputString("Dirección"),["Visita Domicilio", "instalar Gadget"], inputString("mensaje"));
+//msg = new FormMsg(inputString("Nombre Completo"), inputString("email"), inputString("teléfono"), inputString("Dirección"),["Visita Domicilio", "instalar Gadget"], inputString("mensaje"));
 
-msg.printAllInputs()
-console.log(msg.fullName.toUpperCase())
