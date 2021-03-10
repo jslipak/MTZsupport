@@ -1,10 +1,11 @@
+//Clases 
 class FormMsg {
     constructor(fullName, email, telephone, address, servicios, msgInput){
         this.fullName = fullName;
         this.email = email;
         this.telephone = telephone;
         this.address = address;
-        this.servicios = servicios
+        this.servicios = servicios;
         this.msgInput = msgInput;
     }
     printAllInputs = function(){
@@ -13,9 +14,15 @@ class FormMsg {
 
 }
 
+//Funciones
+
 function inputString(str) {
     return prompt("Ingrese su " + str +": ");
 }
 
-//msg = new FormMsg(inputString("Nombre Completo"), inputString("email"), inputString("teléfono"), inputString("Dirección"),["Visita Domicilio", "instalar Gadget"], inputString("mensaje"));
+//Selectores 
 
+let email = document.querySelector(".form-group input[name='email']");
+let msg = document.getElementById("msgID");
+let input = document.getElementsByTagName("input");
+let checkbox = document.getElementsByClassName("form-check-input")
