@@ -1,6 +1,5 @@
 # MTZsupport
 
-### Nota Natalia Giselle por favor decime si te llamo por Natalia o Giselle  como te resulte comodo. (a mi Jona) , ya te agregue una clase con una creación de un objeto y luego que lo crea ejecuta un metodo que lista todos los valores de los input. El metodo lo probe en varios navegadores y en casi todos anda --> no me tomo el trabajo de buscar como corrogirlo(para que ande en algun navegador viejo) porque la idea es que los tomo del DOM cuando haga el submit  || Tambien podria ser de los params pero para eso necesitaria un Back-end --> Saludos y buen fin de semana 
 
 - la dirección de hosting es [MTZSupport](https://mtzsupport.000webhostapp.com)
 - El repositorio de github es [MTZSuppot](https://github.com/jslipak/jslipak.github.io)
@@ -23,13 +22,13 @@
     2. Luego Va generar algún contacto activo con migo ya sea por un whatsapp , telegram o email. Así de esta forma voy a saber los datos o en el caso que me quiercomunicar con el potencial cliente y además llevar un estadística.
 
 ### Tareas a realizar 
-- [  ] crear modal: 
-  - [  ] Nombre y apellido.
-  - [  ] email.
-  - [  ] teléfono.
-  - [  ] dirección.
-- [  ] cambiar los botones de mtzsupport para el modal.
-- [  ] insertar el javascript para que el modal ante el evento click se active el modal.
+- [x] crear modal: 
+  - [x] Nombre y apellido.
+  - [x] email.
+  - [x] teléfono.
+  - [x] dirección.
+- [x] cambiar los botones de mtzsupport para el modal.
+- [x] insertar el javascript para que el modal ante el evento click se active el modal.
 - [  ] Hacer función para checkear el teléfono.
 - [  ] Hacer función para checkear el email.
 - [  ] Dirección.

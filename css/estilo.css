@@ -225,6 +225,9 @@ body {
   border-radius: 50%;
   width: 80%; }
 
+.wrong {
+  background-color: #ffbebe; }
+
 /* fin general */
 div.socialside ul {
   display: flex;
