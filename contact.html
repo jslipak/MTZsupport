@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/richtext.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
+    <script defer src="./javascripts/main.js"></script>
 </head>
 <!-- fin head -->
 <!-- inicio body -->
@@ -75,30 +77,41 @@
                 </div>
                 <form method="post">
                     <h2 class="">Contáctenos </h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="txtName" class="form-control" placeholder="Nombre" value=""
-                                />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtName" class="form-label text-dark">Nombre:</label>
+                                    <input type="text" name="txtName" class="form-control" placeholder="Nombre" value=""
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label text-dark">E-mail:</label>
+                                    <input type="text" name="email" class="form-control" placeholder="Correo Electronico"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtPhone" class="form-label text-dark">Télefono:</label>
+                                    <input type="text" name="txtPhone" class="form-control" placeholder="Celular" value=""
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtAddress" class="form-label text-dark">Dirección:</label>
+                                    <input type="text" name="txtAddress" class="form-control" placeholder="Dirección"
+                                        value="" />
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" name="txtEmail" class="form-control" placeholder="Correo Electronico"
-                                    value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="txtPhone" class="form-control" placeholder="Celular" value=""
-                                />
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea id="msgID" name="txtMsg" class="form-control" placeholder="Su mensaje"
+                                        style="width: 100%; height: 150px;"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-success float-right" disabled>
+                                    enviar
+                                </button>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea name="txtMsg" class="form-control" placeholder="Su mensaje" style="width: 100%; height: 150px;"></textarea>
-                            </div>
-                            <div class="form-group float-right">
-                                <input type="submit" name="btnSubmit" class="btn btn-dark" value="Enviar" />
-                            </div>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>
@@ -165,6 +178,8 @@
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
+    <script type="text/javascript" src="./javascripts/jquery.richtext.min.js">
+    </script>
 </body>
 </body>
 <!-- fin body -->
