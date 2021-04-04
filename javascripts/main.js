@@ -37,7 +37,7 @@ let msg = document.getElementById('msgID');
 let input = document.getElementsByTagName('input');
 let checkbox = document.getElementsByClassName('form-check-input');
 let btnModal = document.querySelector('button.btn.btn-success');
-
+let socialLi = $('.socialside ul li');
 //https://github.com/webfashionist/RichText
 $('#msgID').richText({
   imageUpload: false,
@@ -57,9 +57,42 @@ $(document).ready(function () {
       return false;
     }
   });
+  socialLi.mouseenter(function (e) {
+    console.log(this);
+    $(this).animate({
+      width: '100px',
+    });
+  });
+  socialLi.mouseleave(function (e) {
+    $(this).animate({
+      width: '50px',
+    });
+  });
 });
 
 window.onload = function () {
+  string_to_add = '';
+  product.forEach((e) => {
+    if ((e.todo == '') & (e.note == '')) {
+      string_to_add += `
+                <div class="col-md-4 d-flex align-items-strech">
+                    <div class="card mb-4 cardColorBG">
+                        <img class="card-img-top" src="${e.imagen}" alt="${e.imagen}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">${e.title}</h5>
+                            <p class="card-text">${e.description}</p>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
+                        </div>
+                    </div>
+                </div>
+        `;
+    }
+  });
+  //$('#short_cards').append(string_to_add);
+  document
+    .querySelector('#short_cards')
+    .insertAdjacentHTML('beforeend', string_to_add);
+
   email.addEventListener('input', function (e) {
     if (isEmail(e.target.value)) {
       email.classList.remove('wrong');

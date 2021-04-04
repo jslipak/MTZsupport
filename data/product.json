@@ -1,0 +1,37 @@
+[{
+        "title": "vpn",
+        "description": "Nos dedicamos a gestionar y administrar servidores virtuales para su empresa o emprendimiento",
+        "note": "Tanto ambientes Linux como Windows",
+        "todo": "Podemos administrar y gestionar: DigitalOcean, AWS, Azureus o CloudCone",
+        "imagen": "./img/card1.jpg"
+    },
+    {
+        "title": "Servers Dedicados",
+        "description": "Server para su empresa, La solución mas segura",
+        "note": "Tanto de marcas como clones",
+        "todo": "Sabemos implementar servers para su empresa: tanto de vpn , file-server , de Aplicaciones o de base de datos.",
+        "imagen": "./img/card2.jpg"
+    },
+    {
+        "title": "Teclados Personalizados",
+        "description": "Nos dedicamos a el armado y ensamblado de teclados personalizados consulte modelos, tenga en cuenta que dependiendo del modelo puede tener demoras significativas.",
+        "note": "",
+        "todo": "",
+        "imagen": "./img/corne.jpg"
+    },
+    {
+        "title": "Zonas Wi - Fi",
+        "description": "Contamos con experiencia en instalación de zonas wi-fi de la tecnología deco-dash. Estamos familiarizados con equipos tp-link y ubiquiti.",
+        "note": "",
+        "todo": "",
+        "imagen": "./img/wifi.jpg"
+    },
+    {
+        "title": "Maquinas Virtuales",
+        "description": "Instalaciones OpenStack , para virtualizar servidores y puesto de trabajo , ideal para generar puestos de trabajos remoto y flexibles",
+        "note": "",
+        "todo": "",
+        "imagen": "./img/cloud.jpg"
+    }
+
+]

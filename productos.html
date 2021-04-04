@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" href="./css/richtext.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./javascripts/importProduct.js"></script>
     <script defer src="./javascripts/main.js"></script>
 
 </head>
@@ -82,7 +83,7 @@
                             <div class="mb-1 text-white-50 small">Tanto ambientes Linux como Windows</div>
                             <p class="card-text mb-auto">Podemos administrar y gestionar: DigitalOcean, AWS,
                                 Azureus o CloudCone</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Comprar</button>
                         </div>
                         <img class="card-img-right flex-auto d-none d-lg-block" alt="VPS" src="./img/card1.jpg"
                             style="width: 200px; height: 250px;">
@@ -99,52 +100,52 @@
                             <p class="card-text mb-auto">Sabemos implementar servers para su empresa: tanto
                                 de vpn , file-server , de Aplicaciones o de base
                                 de datos,</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
+                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Comprar</button>
                         </div>
                         <img class="card-img-right flex-auto d-none d-lg-block" alt="Server" src="./img/card2.jpg"
                             style="width: 200px; height: 250px;">
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 d-flex align-items-strech">
-                    <div class="card mb-4 cardColorBG">
-                        <img class="card-img-top" src="./img/corne.jpg" alt="keyboard">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Teclados Personalizados</h5>
-                            <p class="card-text">Nos dedicamos a el armado y ensamblado de teclados
-                                personalizados consulte modelos, tenga en cuenta
-                                que dependiendo del modelo puede tener demoras
-                                significativas.
-                            </p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-strech">
-                    <div class="card mb-4 cardColorBG">
-                        <img class="card-img-top" src="./img/wifi.jpg" alt="wifi">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Zonas Wi-Fi</h5>
-                            <p class="card-text">Contamos con experiencia en instalación de zonas wi-fi
-                                de la tecnología deco-dash. Estamos familiarizados
-                                con equipos tp-link y ubiquiti.</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex align-items-strech">
-                    <div class="card mb-4 cardColorBG">
-                        <img class="card-img-top" src="./img/cloud.jpg" alt="Card image cap">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Maquinas Virtuales</h5>
-                            <p class="card-text">Instalaciones OpenStack , para virtualizar servidores
-                                y puesto de trabajo , ideal para generar puestos
-                                de trabajos remoto y flexibles</p>
-                            <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="short_cards">
+                <!--<div class="col-md-4 d-flex align-items-strech">-->
+                    <!--<div class="card mb-4 cardColorBG">-->
+                        <!--<img class="card-img-top" src="./img/corne.jpg" alt="keyboard">-->
+                        <!--<div class="card-body d-flex flex-column">-->
+                            <!--<h5 class="card-title">Teclados Personalizados</h5>-->
+                            <!--<p class="card-text">Nos dedicamos a el armado y ensamblado de teclados-->
+                                <!--personalizados consulte modelos, tenga en cuenta-->
+                                <!--que dependiendo del modelo puede tener demoras-->
+                                <!--significativas.-->
+                            <!--</p>-->
+                            <!--<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 d-flex align-items-strech">-->
+                    <!--<div class="card mb-4 cardColorBG">-->
+                        <!--<img class="card-img-top" src="./img/wifi.jpg" alt="wifi">-->
+                        <!--<div class="card-body d-flex flex-column">-->
+                            <!--<h5 class="card-title">Zonas Wi-Fi</h5>-->
+                            <!--<p class="card-text">Contamos con experiencia en instalación de zonas wi-fi-->
+                                <!--de la tecnología deco-dash. Estamos familiarizados-->
+                                <!--con equipos tp-link y ubiquiti.</p>-->
+                            <!--<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 d-flex align-items-strech">-->
+                    <!--<div class="card mb-4 cardColorBG">-->
+                        <!--<img class="card-img-top" src="./img/cloud.jpg" alt="Card image cap">-->
+                        <!--<div class="card-body d-flex flex-column">-->
+                            <!--<h5 class="card-title">Maquinas Virtuales</h5>-->
+                            <!--<p class="card-text">Instalaciones OpenStack , para virtualizar servidores-->
+                                <!--y puesto de trabajo , ideal para generar puestos-->
+                                <!--de trabajos remoto y flexibles</p>-->
+                            <!--<button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#ModalForm">Mas información</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
         </div>
 

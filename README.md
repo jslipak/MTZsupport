@@ -30,7 +30,7 @@
 - [x] cambiar los botones de mtzsupport para el modal.
 - [x] insertar el javascript para que el modal ante el evento click se active el modal.
 - [  ] Hacer función para checkear el teléfono.
-- [  ] Hacer función para checkear el email.
+- [x] Hacer función para checkear el email.
 - [  ] Dirección.
   - [  ] Crear zonas , asignarles día y horarios.
   - [  ] Hacer que revise que la dirección que pone este dentro de las zonas de cobertura
