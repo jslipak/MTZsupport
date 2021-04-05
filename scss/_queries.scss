@@ -4,14 +4,13 @@
     .contenedor {
         width: 100vw;
     }
-    .navbar-brand  {
-      position: fixed;
-      top: 2%;
-      left: 4%;
-      z-index: 1;
-      background-color: $blackBabe;
+    .navbar-brand {
+        position: fixed;
+        top: 2%;
+        left: 4%;
+        z-index: 1;
+        background-color: $blackBabe;
     }
-    
     div.legend {
         width: 100vw;
     }
@@ -19,15 +18,17 @@
         margin: 8% auto;
     }
     div.legendText {
-        h1,h2,h3 {
+        h1,
+        h2,
+        h3 {
             display: none;
         }
         p {
             display: none;
         }
     }
-    div.zonaFlex  {
-      flex-direction: column;
+    div.zonaFlex {
+        flex-direction: column;
     }
     h5 {
         display: inline;
@@ -63,6 +64,15 @@
     .flex>p {
         display: block;
         width: 90%;
+    }
+    .contactMain {
+        height: 1000px;
+        form {
+            margin-top:100px;
+        }
+        .jumbotron{
+            display:none;
+        }
     }
     footer.footerStyle {
         flex-direction: column;
@@ -137,6 +147,15 @@
     .flex>p {
         display: block;
         width: 90%;
+    }
+    .contactMain {
+        height: 1000px;
+        .jumbotron{
+            display: none;
+        }
+        form {
+            margin-top: 150px;
+        }
     }
     footer.footerStyle {
         flex-direction: row;
