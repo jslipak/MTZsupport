@@ -1,9 +1,8 @@
-const url = `https://jslipak.github.io/data/product.json`;
-
-var urlLocal = `/data/product.json`;
+const URL = `https://jslipak.github.io/data/product.json`;
+let product = [];
 $.ajax({
   method: 'GET',
-  url: url,
+  url: URL,
 })
   .done(function (data) {
     product = data;
