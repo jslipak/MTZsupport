@@ -39,17 +39,18 @@ let checkbox = document.getElementsByClassName('form-check-input');
 let btnModal = document.querySelector('button.btn.btn-success');
 let socialLi = $('.socialside ul li');
 //https://github.com/webfashionist/RichText
-$('#msgID').richText({
-  imageUpload: false,
-  fileUpload: false,
-  videoEmbed: false,
-  urls: false,
-  removeStyles: false,
-  code: false,
-  table: false,
-  justify: false,
-});
-
+if ($('#msgID').length > 0) {
+  $('#msgID').richText({
+    imageUpload: false,
+    fileUpload: false,
+    videoEmbed: false,
+    urls: false,
+    removeStyles: false,
+    code: false,
+    table: false,
+    justify: false,
+  });
+}
 $(document).ready(function () {
   $(window).keydown(function (event) {
     if (event.keyCode == 13) {
@@ -71,10 +72,11 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
-  string_to_add = '';
-  product.forEach((e) => {
-    if ((e.todo == '') & (e.note == '')) {
-      string_to_add += `
+  if (typeof product !== 'undefined') {
+    string_to_add = '';
+    product.forEach((e) => {
+      if ((e.todo == '') & (e.note == '')) {
+        string_to_add += `
                 <div class="col-md-4 d-flex align-items-strech">
                     <div class="card mb-4 cardColorBG">
                         <img class="card-img-top" src="${e.imagen}" alt="${e.imagen}">
@@ -86,30 +88,32 @@ window.onload = function () {
                     </div>
                 </div>
         `;
-    }
-  });
-  //$('#short_cards').append(string_to_add);
-  document
-    .querySelector('#short_cards')
-    .insertAdjacentHTML('beforeend', string_to_add);
-
-  email.addEventListener('input', function (e) {
-    if (isEmail(e.target.value)) {
-      email.classList.remove('wrong');
-      btnModal.disabled = false;
-    } else {
-      email.classList.add('wrong');
-      btnModal.disabled = true;
-    }
-  });
-  btnModal.addEventListener('click', function (e) {
-    let modalSubmit = new FormMsg(
-      name.value,
-      email.value,
-      phone.value,
-      address.value,
-      msg.value,
-    );
-    localStorage.setItem('lastMSG', JSON.stringify(modalSubmit));
-  });
+      }
+    });
+    //$('#short_cards').append(string_to_add);
+    document
+      .querySelector('#short_cards')
+      .insertAdjacentHTML('beforeend', string_to_add);
+  }
+  if ($('#msgID').length > 0) {
+    email.addEventListener('input', function (e) {
+      if (isEmail(e.target.value)) {
+        email.classList.remove('wrong');
+        btnModal.disabled = false;
+      } else {
+        email.classList.add('wrong');
+        btnModal.disabled = true;
+      }
+    });
+    btnModal.addEventListener('click', function (e) {
+      let modalSubmit = new FormMsg(
+        name.value,
+        email.value,
+        phone.value,
+        address.value,
+        msg.value,
+      );
+      localStorage.setItem('lastMSG', JSON.stringify(modalSubmit));
+    });
+  }
 };
