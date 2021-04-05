@@ -1,4 +1,4 @@
-`https://jslipak.github.io/data/product.json`;
+const url = `https://jslipak.github.io/data/product.json`;
 
 var urlLocal = `/data/product.json`;
 $.ajax({
