@@ -1,11 +1,10 @@
-url =
-  'https://github.com/jslipak/jslipak.github.io/tree/main/data/product.json';
+url = 'https://jslipak.github.io/data/product.json';
 let product = [];
-fetch(url)
+fetch(url, { method: 'GET', mode: 'no-cors' })
   .then((res) => res.json())
   .then((data) => (product = data));
 
-//$.getJSON('/data/product.json', function (json) {
+//$.getJSON(url, function (json) {
 //product = json;
 //});
 
