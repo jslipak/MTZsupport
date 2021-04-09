@@ -58,17 +58,17 @@ $(document).ready(function () {
       return false;
     }
   });
-  socialLi.mouseenter(function (e) {
-    console.log(this);
-    $(this).animate({
-      width: '100px',
-    });
-  });
-  socialLi.mouseleave(function (e) {
-    $(this).animate({
-      width: '50px',
-    });
-  });
+  //socialLi.mouseenter(function (e) {
+  //console.log(this);
+  //$(this).animate({
+  //width: '100px',
+  //});
+  //});
+  //socialLi.mouseleave(function (e) {
+  //$(this).animate({
+  //width: '50px',
+  //});
+  //});
 });
 
 window.onload = function () {

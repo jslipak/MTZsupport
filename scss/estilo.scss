@@ -66,12 +66,12 @@ $productosCardBG: $blackBabe;
 /* variables Contact */
 $bckGroundContactColor: $babyBlue;
 
-
 /* Importaciones  */
 
 @import "divisores";
 @import "generales";
 @import "socialside";
+@import "sidebar_ecommerce";
 @import "navbar";
 @import "footer";
 @import "index";
@@ -80,5 +80,3 @@ $bckGroundContactColor: $babyBlue;
 @import "servicios";
 @import "contactos";
 @import "queries";
-
-
