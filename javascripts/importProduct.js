@@ -1,14 +1,16 @@
 const URL = `https://jslipak.github.io/data/product.json`;
 let navbarItem = document.querySelector('ul.navbar-nav');
 let sideBarEcommerce = document.querySelector('footer');
-let product = [];
+let product_to_loading = [];
+let btnComprar = document.querySelectorAll('button.comprar');
+let scroller = document.querySelector("a[data-target='#ecommerceModal']");
 fetch(URL)
   .then((res) => res.json())
   .then((data) => {
-    product = data;
-    if (typeof product !== 'undefined') {
+    product_to_loading = data;
+    if (typeof product_to_loading !== 'undefined') {
       string_to_add = '';
-      product.forEach((e) => {
+      product_to_loading.forEach((e) => {
         if ((e.todo == '') & (e.note == '')) {
           string_to_add += `
   <div class="col-md-4 d-flex align-items-strech">
@@ -31,16 +33,19 @@ fetch(URL)
     }
   });
 
-navbarItem.insertAdjacentHTML(
-  'beforeend',
-  `<li class="nav-items"><a type="button" class="nav-link" data-toggle="modal" data-target="#exampleModal"> Sidebar Modal </a></li>`,
-);
-
-sideBarEcommerce.insertAdjacentHTML(
-  'afterend',
-  `
+btnComprar.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    if (!scroller) {
+      navbarItem.insertAdjacentHTML(
+        'beforeend',
+        `<li class="nav-items"><a type="button" class="nav-link" data-toggle="modal" data-target="#ecommerceModal"> Sidebar Modal </a></li>`,
+      );
+      scroller = document.querySelector("a[data-target='#ecommerceModal']");
+      sideBarEcommerce.insertAdjacentHTML(
+        'afterend',
+        `
  <!--inicio sidebar-->
-    <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal left fade" id="ecommerceModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -59,6 +64,11 @@ sideBarEcommerce.insertAdjacentHTML(
         </div>
     </div>
     <!--fin sidebar-->
-    
 `,
-);
+      );
+    }
+    //TODO: funciton button comprar aca la carga
+    //
+    // END:
+  });
+});
