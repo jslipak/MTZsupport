@@ -32,7 +32,10 @@ function isEmail(email) {
   return RegExpEmail.test(email);
 }
 //Selectores
+let name = document.querySelector(".form-group input[name='name']");
 let email = document.querySelector(".form-group input[name='email']");
+let phone = document.querySelector(".form-group input[name='phone']");
+let address = document.querySelector(".form-group input[name='address']");
 let msg = document.getElementById('msgID');
 let input = document.getElementsByTagName('input');
 let checkbox = document.getElementsByClassName('form-check-input');
@@ -58,17 +61,6 @@ $(document).ready(function () {
       return false;
     }
   });
-  //socialLi.mouseenter(function (e) {
-  //console.log(this);
-  //$(this).animate({
-  //width: '100px',
-  //});
-  //});
-  //socialLi.mouseleave(function (e) {
-  //$(this).animate({
-  //width: '50px',
-  //});
-  //});
 });
 
 window.onload = function () {
@@ -82,15 +74,28 @@ window.onload = function () {
         btnModal.disabled = true;
       }
     });
-    btnModal.addEventListener('click', function (e) {
-      let modalSubmit = new FormMsg(
-        name.value,
-        email.value,
-        phone.value,
-        address.value,
-        msg.value,
-      );
-      localStorage.setItem('lastMSG', JSON.stringify(modalSubmit));
-    });
   }
+  btnModal.addEventListener('click', function (e) {
+    let modalSubmit = new FormMsg(
+      name.value,
+      email.value,
+      phone.value,
+      address.value,
+      'Consulta',
+      msg.value,
+    );
+    // BUG: menssage value problem with RichText
+    //
+    localStorage.setItem('lastMSG', JSON.stringify(modalSubmit));
+    //Entrega Post
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify(modalSubmit),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  });
 };
