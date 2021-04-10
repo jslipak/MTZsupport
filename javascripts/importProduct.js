@@ -13,7 +13,9 @@ sidebar = function () {
     if (!scroller) {
       navbarItem.insertAdjacentHTML(
         'beforeend',
-        `<li class="nav-items"><a type="button" class="nav-link" data-toggle="modal" data-target="#ecommerceModal"> Sidebar Modal </a></li>`,
+        `<li class="nav-items"><a type="button" class="nav-link"
+        data-toggle="modal" data-target="#ecommerceModal"> <img
+        src="/img/shopping-cart.svg" height="20px" alt="cart"/> </a></li>`,
       );
       scroller = document.querySelector("a[data-target='#ecommerceModal']");
       sideBarEcommerce.insertAdjacentHTML(
