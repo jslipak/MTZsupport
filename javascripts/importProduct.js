@@ -13,7 +13,7 @@ sidebar = function () {
     if (!scroller) {
       navbarItem.insertAdjacentHTML(
         'beforeend',
-        `<li class="nav-items"><a type="button" class="nav-link"
+        `<li class="nav-items" id="ecommerceLi"><a type="button" class="nav-link"
         data-toggle="modal" data-target="#ecommerceModal"> <img
         src="/img/shopping-cart.svg" height="20px" alt="cart"/> </a></li>`,
       );
@@ -35,7 +35,9 @@ sidebar = function () {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn bt-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn bt-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn bt-secondary" data-dismiss="modal" onclick="borrarOrden()">Borrar</button>
+                    <button type="button" class="btn bt-primary" data-dismiss="modal" >comprar</button>
                 </div>
             </div>
         </div>
@@ -47,6 +49,10 @@ sidebar = function () {
   }
 };
 
+borrarOrden = function () {
+  localStorage.clear();
+  document.getElementById('ecommerceLi').remove();
+};
 // Procesos
 if (shortCards) {
   fetch(URL)
