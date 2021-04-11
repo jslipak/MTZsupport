@@ -89,7 +89,7 @@ if (shortCards || longCards) {
                             </h6>
                             <div class="mb-1 text-white-50 small">${e.note}</div>
                             <p class="card-text mb-auto">${e.todo}</p>
-                            <button type="button" class="btn btn-outline-light comprar" >Comprar</button>
+                            <button type="button" class="btn btn-outline-light comprar" data-id=${e.productId} >Comprar</button>
                         </div>
                         <img class="card-img-right flex-auto d-none d-lg-block" alt="${e.imagen}" src="${e.imagen}" style="width: 200px; height: 250px;">
                     </div>
