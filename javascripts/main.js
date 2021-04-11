@@ -32,6 +32,7 @@ function isEmail(email) {
   return RegExpEmail.test(email);
 }
 //Selectores
+let formModal = document.querySelector("form[role='form']");
 let name = document.querySelector(".form-group input[name='name']");
 let email = document.querySelector(".form-group input[name='email']");
 let phone = document.querySelector(".form-group input[name='phone']");
@@ -75,7 +76,8 @@ window.onload = function () {
       }
     });
   }
-  btnModal.addEventListener('click', function (e) {
+  formModal.addEventListener('submit', function (e) {
+    e.preventDefault();
     let modalSubmit = new FormMsg(
       name.value,
       email.value,
