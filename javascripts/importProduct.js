@@ -8,7 +8,7 @@ let shortCards = document.querySelector('#short_cards');
 let longCards = document.querySelector('#long_cards');
 
 //funciones
-sidebar = function () {
+var sidebar = function () {
   if (localStorage.getItem('isOrden') == 'true') {
     if (!scroller) {
       navbarItem.insertAdjacentHTML(
@@ -37,7 +37,7 @@ sidebar = function () {
                 <div class="modal-footer">
                     <button type="button" class="btn bt-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn bt-secondary" data-dismiss="modal" onclick="borrarOrden()">Borrar</button>
-                    <button type="button" class="btn bt-primary" data-id=${e.productId} data-dismiss="modal" >comprar</button>
+                    <button type="button" class="btn bt-primary"  data-dismiss="modal" >comprar</button>
                 </div>
             </div>
         </div>
@@ -52,6 +52,7 @@ sidebar = function () {
 borrarOrden = function () {
   localStorage.clear();
   document.getElementById('ecommerceLi').remove();
+  scroller = '';
 };
 // Procesos
 
@@ -65,7 +66,6 @@ if (shortCards || longCards) {
       if (typeof product_to_loading !== 'undefined') {
         product_to_loading.forEach((e) => {
           if ((e.todo == '') & (e.note == '')) {
-            console.log(e);
             string_to_add_short_cards += `
               <div class="col-md-4 d-flex align-items-strech">
                 <div class="card mb-4 cardColorBG">
@@ -101,7 +101,7 @@ if (shortCards || longCards) {
         longCards.insertAdjacentHTML('beforeend', string_to_add_long_cards);
         let btnComprar = document.querySelectorAll('button.comprar');
         btnComprar.forEach(function (item) {
-          item.addEventListener('click', function (e) {
+          item.addEventListener('click', function () {
             localStorage.setItem('isOrden', 'true');
             sidebar();
             //TODO: funciton button comprar aca la carga
