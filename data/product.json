@@ -1,4 +1,5 @@
 [{
+        "productId": "1",
         "title": "vpn",
         "description": "Nos dedicamos a gestionar y administrar servidores virtuales para su empresa o emprendimiento",
         "note": "Tanto ambientes Linux como Windows",
@@ -6,6 +7,7 @@
         "imagen": "./img/card1.jpg"
     },
     {
+        "productId": "2",
         "title": "Servers Dedicados",
         "description": "Server para su empresa, La solución mas segura",
         "note": "Tanto de marcas como clones",
@@ -13,6 +15,7 @@
         "imagen": "./img/card2.jpg"
     },
     {
+        "productId": "3",
         "title": "Teclados Personalizados",
         "description": "Nos dedicamos a el armado y ensamblado de teclados personalizados consulte modelos, tenga en cuenta que dependiendo del modelo puede tener demoras significativas.",
         "note": "",
@@ -20,6 +23,7 @@
         "imagen": "./img/corne.jpg"
     },
     {
+        "productId": "4",
         "title": "Zonas Wi - Fi",
         "description": "Contamos con experiencia en instalación de zonas wi-fi de la tecnología deco-dash. Estamos familiarizados con equipos tp-link y ubiquiti.",
         "note": "",
@@ -27,11 +31,11 @@
         "imagen": "./img/wifi.jpg"
     },
     {
+        "productId": "5",
         "title": "Maquinas Virtuales",
         "description": "Instalaciones OpenStack , para virtualizar servidores y puesto de trabajo , ideal para generar puestos de trabajos remoto y flexibles",
         "note": "",
         "todo": "",
         "imagen": "./img/cloud.jpg"
     }
-
 ]
