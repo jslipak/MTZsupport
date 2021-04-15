@@ -13,37 +13,92 @@ var sidebar = function () {
     if (!scroller) {
       navbarItem.insertAdjacentHTML(
         'beforeend',
-        `<li class="nav-items" id="ecommerceLi"><a type="button" class="nav-link"
-        data-toggle="modal" data-target="#ecommerceModal"> <img
-        src="/img/shopping-cart.svg" height="20px" alt="cart"/> </a></li>`,
+        `<li class="nav-items" id="ecommerceLi">
+            <a type="button" class="nav-link" data-toggle="modal" data-target="#ecommerceModal"> 
+              <img src="/img/shopping-cart.svg" height="20px" alt="cart"/> 
+            </a>
+        </li>`,
       );
       scroller = document.querySelector("a[data-target='#ecommerceModal']");
       sideBarEcommerce.insertAdjacentHTML(
         'afterend',
         `
- <!--inicio sidebar-->
-    <div class="modal left fade" id="ecommerceModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="nav flex-sm-column flex-row">
-                        <a class="nav-item nav-link active" href="#">Home</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
-                        <a href="#" class="nav-item nav-link">Link</a>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn bt-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn bt-secondary" data-dismiss="modal" onclick="borrarOrden()">Borrar</button>
-                    <button type="button" class="btn bt-primary"  data-dismiss="modal" >comprar</button>
-                </div>
+<!--inicio sidebar-->
+<div class="modal left fade" id="ecommerceModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <table class="table text-center">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"><i class="fas fa-store"></i></th>
+                            <th scope="col"><i class="fas fa-layer-group"></i></th>
+                            <th scope="col"><i class="fas fa-dollar-sign"></i></th>
+                            <th scope="col"><i class="far fa-sack-dollar"></i></th>
+                            <th scope="col"><i class="far fa-eraser"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>VPN</span></td>
+                            <td>
+                                <a class="fas fa-plus" href=""></a>
+                                <div>34</div>
+                                <a class="fas fa-minus" href=""></a>
+                            </td>
+                            <td><span>$1000</span></td>
+                            <td><span>$34000</span></td>
+                            <td><span><a class="fas fa-trash"></a></span></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr class="table-info">
+                            <td><span>VPN</span></td>
+                            <td>
+                                <a class="fas fa-plus" href=""></a>
+                                <div>34</div>
+                                <a class="fas fa-minus" href=""></a>
+                            </td>
+                            <td><span>$1000</span></td>
+                            <td><span>$34000</span></td>
+                            <td><span><a class="fas fa-trash"></a></span></td>
+                        </tr>
+                    </tbody>
+										<tbody>
+                        <tr>
+                            <td><span>VPN</span></td>
+                            <td>
+                                <a class="fas fa-plus" href=""></a>
+                                <div>34</div>
+                                <a class="fas fa-minus" href=""></a>
+                            </td>
+                            <td><span>$1000</span></td>
+                            <td><span>$34000</span></td>
+                            <td><span><a class="fas fa-trash"></a></span></td>
+                        </tr>
+                    </tbody>
+										<tfoot class="thead-dark">
+                        <tr>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">$102000</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="borrarOrden()">Borrar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">comprar</button>
             </div>
         </div>
     </div>
-    <!--fin sidebar-->
-`,
+</div>
+<!--fin sidebar-->
+        `,
       );
     }
   }

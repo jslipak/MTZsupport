@@ -251,7 +251,7 @@ div.socialside ul {
   position: fixed;
   right: 0;
   margin: auto;
-  width: 320px;
+  width: 365px;
   height: 100%;
   -webkit-transform: translate3d(0%, 0, 0);
   -ms-transform: translate3d(0%, 0, 0);
@@ -283,6 +283,10 @@ div.socialside ul {
 .modal-header {
   border-bottom-color: #eeeeee;
   background-color: #fafafa; }
+
+td span {
+  display: block;
+  padding-top: 25px; }
 
 /*  nav  */
 header {
