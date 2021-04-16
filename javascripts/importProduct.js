@@ -6,6 +6,7 @@ let product_to_loading = [];
 let scroller = document.querySelector("a[data-target='#ecommerceModal']");
 let shortCards = document.querySelector('#short_cards');
 let longCards = document.querySelector('#long_cards');
+let orden;
 
 //funciones
 var sidebar = function () {
@@ -65,7 +66,7 @@ var sidebar = function () {
                             <td><span><a class="fas fa-trash"></a></span></td>
                         </tr>
                     </tbody>
-										<tbody>
+                    <tbody>
                         <tr>
                             <td><span>VPN</span></td>
                             <td>
@@ -78,7 +79,7 @@ var sidebar = function () {
                             <td><span><a class="fas fa-trash"></a></span></td>
                         </tr>
                     </tbody>
-										<tfoot class="thead-dark">
+                    <tfoot class="thead-dark">
                         <tr>
                             <th scope="col">Total</th>
                             <th scope="col"></th>
@@ -86,7 +87,7 @@ var sidebar = function () {
                             <th scope="col">$102000</th>
                             <th scope="col"></th>
                         </tr>
-                    </thead>
+                        </thead>
                 </table>
             </div>
             <div class="modal-footer">
@@ -108,6 +109,10 @@ borrarOrden = function () {
   localStorage.clear();
   document.getElementById('ecommerceLi').remove();
   scroller = '';
+};
+
+isProductInOrden = function (orden, product) {
+  return orden.findIndex((i) => i.title === product);
 };
 // Procesos
 
@@ -156,12 +161,36 @@ if (shortCards || longCards) {
         longCards.insertAdjacentHTML('beforeend', string_to_add_long_cards);
         let btnComprar = document.querySelectorAll('button.comprar');
         btnComprar.forEach(function (item) {
-          item.addEventListener('click', function () {
+          item.addEventListener('click', function (e) {
+            //TODO: funciton button comprar aca la carga
+            ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy')) || [];
+            productToCheck = e.path[1].childNodes[1].innerText;
+            precioProducto = 100;
+            if (localStorage.getItem('isOrden') !== 'true') {
+              console.log('estoy aca');
+              let arrayOrden = [
+                { title: productToCheck, cantidad: 1, precio: precioProducto },
+              ];
+              localStorage.setItem('ordenToBuy', JSON.stringify(arrayOrden));
+            } else if (isProductInOrden(ordenStorage, productToCheck) >= 0) {
+              console.log('else if');
+              let position = isProductInOrden(ordenStorage, productToCheck);
+              ordenStorage[position].cantidad += 1;
+              localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
+            } else {
+              console.log('else');
+              ordenStorage.push({
+                title: productToCheck,
+                cantidad: 1,
+                precio: precioProducto,
+              });
+              localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
+            }
+
+            // END:
+
             localStorage.setItem('isOrden', 'true');
             sidebar();
-            //TODO: funciton button comprar aca la carga
-            //
-            // END:
           });
         });
       }
