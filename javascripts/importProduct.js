@@ -40,51 +40,13 @@ var sidebar = function () {
                             <th scope="col"><i class="far fa-eraser"></i></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>VPN</span></td>
-                            <td>
-                                <a class="fas fa-plus" href=""></a>
-                                <div>34</div>
-                                <a class="fas fa-minus" href=""></a>
-                            </td>
-                            <td><span>$1000</span></td>
-                            <td><span>$34000</span></td>
-                            <td><span><a class="fas fa-trash"></a></span></td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr class="table-info">
-                            <td><span>VPN</span></td>
-                            <td>
-                                <a class="fas fa-plus" href=""></a>
-                                <div>34</div>
-                                <a class="fas fa-minus" href=""></a>
-                            </td>
-                            <td><span>$1000</span></td>
-                            <td><span>$34000</span></td>
-                            <td><span><a class="fas fa-trash"></a></span></td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td><span>VPN</span></td>
-                            <td>
-                                <a class="fas fa-plus" href=""></a>
-                                <div>34</div>
-                                <a class="fas fa-minus" href=""></a>
-                            </td>
-                            <td><span>$1000</span></td>
-                            <td><span>$34000</span></td>
-                            <td><span><a class="fas fa-trash"></a></span></td>
-                        </tr>
-                    </tbody>
+                    <div id="itemToAdd"></div>
                     <tfoot class="thead-dark">
                         <tr>
                             <th scope="col">Total</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
-                            <th scope="col">$102000</th>
+                            <th id="totalOrden" scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                         </thead>
@@ -93,7 +55,7 @@ var sidebar = function () {
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="borrarOrden()">Borrar</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">comprar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="compraOrden()">comprar</button>
             </div>
         </div>
     </div>
@@ -102,7 +64,43 @@ var sidebar = function () {
         `,
       );
     }
+    populateOrden();
   }
+};
+
+populateOrden = function () {
+  let htmlAdd = document.querySelector('thead.thead-dark');
+  let totalHtml = document.getElementById('totalOrden');
+  let deleteItems = document.querySelectorAll('.deleteBeforeToChange');
+  let totalOrden = 0;
+  deleteItems.forEach((e) => {
+    e.remove();
+  });
+  storageItems = JSON.parse(localStorage.getItem('ordenToBuy'));
+  storageItems.forEach((element) => {
+    totalOrden += element.precio * element.cantidad;
+    let stringItem = `
+                    <tbody class="deleteBeforeToChange">
+                        <tr>
+                            <td><span>${element.title}</span></td>
+                            <td>
+                                <a class="fas fa-plus" href=""></a>
+                                <div>${element.cantidad}</div>
+                                <a class="fas fa-minus" href=""></a>
+                            </td>
+                            <td><span>${element.precio}</span></td>
+                            <td><span>$${
+                              element.precio * element.cantidad
+                            }</span></td>
+                            <td><span><a onclick="deleteItem('${
+                              element.title
+                            }')" class="fas fa-trash"></a></span></td>
+                        </tr>
+                    </tbody>
+                    `;
+    htmlAdd.insertAdjacentHTML('afterend', stringItem);
+  });
+  totalHtml.innerText = `$${totalOrden}`;
 };
 
 borrarOrden = function () {
@@ -111,8 +109,26 @@ borrarOrden = function () {
   scroller = '';
 };
 
+compraOrden = function () {
+  ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy'));
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify(ordenStorage),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+  borrarOrden();
+};
+
 isProductInOrden = function (orden, product) {
   return orden.findIndex((i) => i.title === product);
+};
+
+deleteItem = function (title) {
+  console.log(title);
 };
 // Procesos
 
@@ -149,7 +165,7 @@ if (shortCards || longCards) {
                             </h6>
                             <div class="mb-1 text-white-50 small">${e.note}</div>
                             <p class="card-text mb-auto">${e.todo}</p>
-                            <button type="button" class="btn btn-outline-light comprar" data-id=${e.productId} >Comprar</button>
+                            <button type="button" class="btn btn-outline-light comprar" data-title=${e.title} data-id=${e.productId} >Comprar</button>
                         </div>
                         <img class="card-img-right flex-auto d-none d-lg-block" alt="${e.imagen}" src="${e.imagen}" style="width: 200px; height: 250px;">
                     </div>
@@ -162,9 +178,11 @@ if (shortCards || longCards) {
         let btnComprar = document.querySelectorAll('button.comprar');
         btnComprar.forEach(function (item) {
           item.addEventListener('click', function (e) {
-            //TODO: funciton button comprar aca la carga
             ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy')) || [];
-            productToCheck = e.path[1].childNodes[1].innerText;
+            //bug in chrome with event
+            //productToCheck = e.path[1].childNodes[1].innerText;
+            productToCheck = e.target.dataset.title;
+            console.log(productToCheck);
             precioProducto = 100;
             if (localStorage.getItem('isOrden') !== 'true') {
               console.log('estoy aca');
@@ -187,8 +205,6 @@ if (shortCards || longCards) {
               localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
             }
 
-            // END:
-
             localStorage.setItem('isOrden', 'true');
             sidebar();
           });
@@ -196,5 +212,4 @@ if (shortCards || longCards) {
       }
     });
 }
-
 sidebar();
