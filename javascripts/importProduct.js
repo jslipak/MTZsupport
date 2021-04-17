@@ -129,6 +129,19 @@ isProductInOrden = function (orden, product) {
 
 deleteItem = function (title) {
   console.log(title);
+  ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy'));
+  let newOrden = ordenStorage.filter((item) => {
+    return item.title != title;
+  });
+  console.log(newOrden);
+  localStorage.setItem('ordenToBuy', JSON.stringify(newOrden));
+  if (newOrden.length == 0) {
+    console.log('borra orden length 0');
+    borrarOrden();
+    $('#ecommerceModal').modal('toggle');
+  } else {
+    sidebar();
+  }
 };
 // Procesos
 
