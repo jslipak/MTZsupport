@@ -21,8 +21,8 @@
         "title": "Teclados Personalizados",
         "precio": "200",
         "description": "Nos dedicamos a el armado y ensamblado de teclados personalizados consulte modelos, tenga en cuenta que dependiendo del modelo puede tener demoras significativas.",
-        "note": "",
-        "todo": "",
+        "note": "lorem oeuoeuoeuoe  oeuuiaoeuieuideuiaeeuaoe",
+        "todo": "ihntuaoehud.pixkoeukbmn uaonuhoaeu soeuhsaoenu houdsaouhoeu ouaohsn",
         "imagen": "./img/corne.jpg"
     },
     {
@@ -37,10 +37,10 @@
     {
         "productId": "5",
         "title": "Maquinas Virtuales",
-        "precio": "200",
+        "precio": "4444",
         "description": "Instalaciones OpenStack , para virtualizar servidores y puesto de trabajo , ideal para generar puestos de trabajos remoto y flexibles",
-        "note": "",
-        "todo": "",
+        "note": "euhatnsouhtnu tu uoesuhoae us",
+        "todo": "ihtnsaouht soehntuhaoe usaoenuht aoushtaoeu saoeuhaoe suaoehsu aoeusnaoehtuhtn",
         "imagen": "./img/cloud.jpg"
     }
 ]
