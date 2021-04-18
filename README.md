@@ -13,7 +13,7 @@
 ### Cosas a mejorar
 
 [ ] en vez de usar title  , usar a id 
-[ ] Agregar precio en el json y en la vista , en vez de dejarlo con un valor de default de 100
+[x] Agregar precio en el json y en la vista , en vez de dejarlo con un valor de default de 100
 [ ] Optimizar el codigo y reutilizar funciones para procesos similares o repetidos
 
 
