@@ -1,5 +1,7 @@
 //Var & Cons
-const URL = `https://jslipak.github.io/data/product.json`;
+const URL =
+  'http://localhost:3000/data/product.json' ||
+  `https://jslipak.github.io/data/product.json`;
 let navbarItem = document.querySelector('ul.navbar-nav');
 let sideBarEcommerce = document.querySelector('footer');
 let product_to_loading = [];
@@ -196,13 +198,13 @@ if (shortCards || longCards) {
               <div class="col-md-6 d-flex align-items-strech">
                     <div class="card text-white cardColorBG flex-md-row mb-4 shadow-sm h-md-250">
                         <div class="card-body d-flex flex-column align-items-start">
-                            <strong class="d-inline-block mb-2 text-white">${e.title}</strong>
+                            <strong class="d-inline-block mb-2 text-white">${e.title}:  $${e.precio}</strong>
                             <h6 class="mb-0">
                               ${e.description}
                             </h6>
                             <div class="mb-1 text-white-50 small">${e.note}</div>
                             <p class="card-text mb-auto">${e.todo}</p>
-                            <button type="button" class="btn btn-outline-light comprar" data-title=${e.title} data-id=${e.productId} >Comprar</button>
+                            <button type="button" class="btn btn-outline-light comprar" data-precio=${e.precio} data-title=${e.title} data-id=${e.productId} >Comprar</button>
                         </div>
                         <img class="card-img-right flex-auto d-none d-lg-block" alt="${e.imagen}" src="${e.imagen}" style="width: 200px; height: 250px;">
                     </div>
@@ -220,7 +222,7 @@ if (shortCards || longCards) {
             //productToCheck = e.path[1].childNodes[1].innerText;
             productToCheck = e.target.dataset.title;
             console.log(productToCheck);
-            precioProducto = 100;
+            precioProducto = e.target.dataset.precio;
             if (localStorage.getItem('isOrden') !== 'true') {
               console.log('estoy aca');
               let arrayOrden = [

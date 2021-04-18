@@ -1,6 +1,7 @@
 [{
         "productId": "1",
         "title": "vpn",
+        "precio": "2000",
         "description": "Nos dedicamos a gestionar y administrar servidores virtuales para su empresa o emprendimiento",
         "note": "Tanto ambientes Linux como Windows",
         "todo": "Podemos administrar y gestionar: DigitalOcean, AWS, Azureus o CloudCone",
@@ -9,6 +10,7 @@
     {
         "productId": "2",
         "title": "Servers Dedicados",
+        "precio": "25000",
         "description": "Server para su empresa, La solución mas segura",
         "note": "Tanto de marcas como clones",
         "todo": "Sabemos implementar servers para su empresa: tanto de vpn , file-server , de Aplicaciones o de base de datos.",
@@ -17,6 +19,7 @@
     {
         "productId": "3",
         "title": "Teclados Personalizados",
+        "precio": "200",
         "description": "Nos dedicamos a el armado y ensamblado de teclados personalizados consulte modelos, tenga en cuenta que dependiendo del modelo puede tener demoras significativas.",
         "note": "",
         "todo": "",
@@ -25,6 +28,7 @@
     {
         "productId": "4",
         "title": "Zonas Wi - Fi",
+        "precio": "200",
         "description": "Contamos con experiencia en instalación de zonas wi-fi de la tecnología deco-dash. Estamos familiarizados con equipos tp-link y ubiquiti.",
         "note": "",
         "todo": "",
@@ -33,6 +37,7 @@
     {
         "productId": "5",
         "title": "Maquinas Virtuales",
+        "precio": "200",
         "description": "Instalaciones OpenStack , para virtualizar servidores y puesto de trabajo , ideal para generar puestos de trabajos remoto y flexibles",
         "note": "",
         "todo": "",
