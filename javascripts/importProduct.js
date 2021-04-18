@@ -84,9 +84,13 @@ populateOrden = function () {
                         <tr>
                             <td><span>${element.title}</span></td>
                             <td>
-                                <a class="fas fa-plus" href=""></a>
+                                <a class="fas fa-plus"  onclick="plusItem('${
+                                  element.title
+                                }')"></a>
                                 <div>${element.cantidad}</div>
-                                <a class="fas fa-minus" href=""></a>
+                                <a class="fas fa-minus" onclick="minusItem('${
+                                  element.title
+                                }')"></a>
                             </td>
                             <td><span>${element.precio}</span></td>
                             <td><span>$${
@@ -140,6 +144,26 @@ deleteItem = function (title) {
     borrarOrden();
     $('#ecommerceModal').modal('toggle');
   } else {
+    sidebar();
+  }
+};
+
+plusItem = function (title) {
+  let ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy'));
+  console.log(ordenStorage);
+  position = isProductInOrden(ordenStorage, title);
+  ordenStorage[position].cantidad += 1;
+  localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
+  sidebar();
+};
+
+minusItem = function (title) {
+  let ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy'));
+  console.log(ordenStorage);
+  position = isProductInOrden(ordenStorage, title);
+  if (ordenStorage[position].cantidad > 0) {
+    ordenStorage[position].cantidad -= 1;
+    localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
     sidebar();
   }
 };
