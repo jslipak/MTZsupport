@@ -42,5 +42,14 @@
         "note": "euhatnsouhtnu tu uoesuhoae us",
         "todo": "ihtnsaouht soehntuhaoe usaoenuht aoushtaoeu saoeuhaoe suaoehsu aoeusnaoehtuhtn",
         "imagen": "./img/cloud.jpg"
+    },
+    {
+        "productId": "6",
+        "title": "Reuters",
+        "precio": "15000",
+        "description": "Server para su empresa, La solución mas segura",
+        "note": "Tanto de marcas como clones",
+        "todo": "Sabemos implementar servers para su empresa: tanto de vpn , file-server , de Aplicaciones o de base de datos.",
+        "imagen": "./img/card2.jpg"
     }
 ]

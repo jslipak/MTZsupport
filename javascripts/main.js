@@ -43,18 +43,18 @@ let checkbox = document.getElementsByClassName('form-check-input');
 let btnModal = document.querySelector('button.btn.btn-success');
 let socialLi = $('.socialside ul li');
 //https://github.com/webfashionist/RichText
-if ($('#msgID').length > 0) {
-  $('#msgID').richText({
-    imageUpload: false,
-    fileUpload: false,
-    videoEmbed: false,
-    urls: false,
-    removeStyles: false,
-    code: false,
-    table: false,
-    justify: false,
-  });
-}
+//if ($('#msgID').length > 0) {
+//$('#msgID').richText({
+//imageUpload: false,
+//fileUpload: false,
+//videoEmbed: false,
+//urls: false,
+//removeStyles: false,
+//code: false,
+//table: false,
+//justify: false,
+//});
+//}
 $(document).ready(function () {
   $(window).keydown(function (event) {
     if (event.keyCode == 13) {
