@@ -1,7 +1,5 @@
 //Var & Cons
-const URL =
-  'http://localhost:3000/data/product.json' ||
-  `https://jslipak.github.io/data/product.json`;
+const URL = `https://jslipak.github.io/data/product.json`;
 let navbarItem = document.querySelector('ul.navbar-nav');
 let sideBarEcommerce = document.querySelector('footer');
 let product_to_loading = [];
