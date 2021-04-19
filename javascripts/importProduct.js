@@ -161,10 +161,12 @@ minusItem = function (title) {
   let ordenStorage = JSON.parse(localStorage.getItem('ordenToBuy'));
   console.log(ordenStorage);
   position = isProductInOrden(ordenStorage, title);
-  if (ordenStorage[position].cantidad > 0) {
+  if (ordenStorage[position].cantidad > 1) {
     ordenStorage[position].cantidad -= 1;
     localStorage.setItem('ordenToBuy', JSON.stringify(ordenStorage));
     sidebar();
+  } else if (ordenStorage[position].cantidad == 1) {
+    deleteItem(title);
   }
 };
 // Procesos
