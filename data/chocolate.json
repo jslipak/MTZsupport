@@ -1,7 +1,12 @@
 [
-  { "id": "1", "name": "Bizniken", "description": "Rico choclate" },
-  { "id": "2", "name": "Dolca", "description": "Rico choclate" },
-  { "id": "3", "name": "Cabsha","description": "Rico choclate" },
-  { "id": "4", "name": "Cabsha", "description": "Rico choclate" },
-  { "id": "5", "name": "Cabsha", "description": "Rico choclate" }
+  { "id": "1","category":"Chocolates" ,  "name": "Bizniken", "description": "Rico choclate",  "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "2","category":"Galletitas" ,  "name": "Opera", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "3","category":"Caramelos" ,  "name": "Sugus","description": "Rico choclate",  "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "4","category":"Chicles" ,  "name": "Bubalu", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "5","category":"Alfajores" ,  "name": "Havanna", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "6","category":"Alfajores" ,  "name": "Jorgito", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "7","category":"Alfajores" ,  "name": "Fantoche", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "8","category":"Alfajores" ,  "name": "Capitan", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "9","category":"Alfajores" ,  "name": "Gualmayen", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30" },
+  { "id": "10","category":"Alfajores" ,  "name": "Shot", "description": "Rico choclate", "precio": "100", "stock":"1000", "photo_url":"http://via.placeholder.com/100px100", "thumb":"http.via.placeholder.com/30px30"}
 ]
